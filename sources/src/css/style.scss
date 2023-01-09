@@ -1,3 +1,46 @@
-body {
-	background-color: aqua;
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: #{$font_name};
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
 }
+@import "reset.scss";
+@import "fonts.scss";
+@import "variables.scss";
+
+body {
+	font-family: "Inter";
+	font-weight: 400;
+	letter-spacing: 0.36px;
+}
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.main {
+	flex: 1 1 auto;
+}
+
+.underline {
+	&::before {
+		transition: width 0.4s ease-in-out;
+		content: "";
+		width: 0;
+		height: 1px;
+		position: absolute;
+		bottom: -3px;
+	}
+}
+
+@import "opening.scss";
+@import "header.scss";

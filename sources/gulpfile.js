@@ -270,5 +270,5 @@ const build = gulp.series(clear, gulp.parallel(styles, js, img, fonts, html), fo
 const criticalBuild = gulp.series(html, criticalCss, changeHtml)
 gulp.task("build", build)
 gulp.task("watch", gulp.series(dev, watch))
-gulp.task("fontsStyle", fontsStyle)
+gulp.task("fonts", gulp.series(fonts, fontsStyle))
 gulp.task("critical", criticalBuild)
