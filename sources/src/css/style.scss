@@ -20,6 +20,7 @@ body {
 	font-family: "Inter";
 	font-weight: 400;
 	letter-spacing: 0.36px;
+	font-size: 1.125rem;
 }
 .wrapper {
 	min-height: 100vh;
@@ -28,7 +29,7 @@ body {
 	position: relative;
 }
 .container {
-	max-width: 1200px;
+	max-width: 1230px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
@@ -62,9 +63,14 @@ body {
 		bottom: -3px;
 	}
 }
-
+.title {
+	@include adaptiv-value("font-size", 45, 20);
+	color: #1c2752;
+	font-family: "Mulish";
+}
 @import "opening.scss";
 @import "header.scss";
 @import "hero.scss";
 @import "welcome.scss";
 @import "offer.scss";
+@import "service.scss";

@@ -76,7 +76,8 @@
 	@include adaptiv-value("margin-top", 40, 15);
 	@include adaptiv-value("padding", 60, 20);
 	box-shadow: -1px 6px 18px rgba(0, 0, 0, 0.09);
-
+	position: relative;
+	margin-bottom: -77px;
 	text-align: left;
 	background-color: white;
 	&__grid {

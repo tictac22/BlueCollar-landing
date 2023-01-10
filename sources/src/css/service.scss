@@ -1,0 +1,84 @@
+.service {
+	@include adaptiv-value("padding-top", 200, 95);
+	text-align: center;
+	background: #f4f4f4;
+	&__title {
+		@include adaptiv-value("margin-top", 22, 10);
+		text-align: center;
+	}
+
+	&__text {
+		margin: 0 auto;
+		margin-top: 12px;
+		max-width: 819px;
+		text-align: center;
+	}
+}
+.container {
+}
+.service-subtitle {
+	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0px 13px;
+	background: white;
+	&__img {
+	}
+
+	&__text {
+		color: #1c2752;
+		margin-left: 5px;
+	}
+}
+.services {
+	text-align: initial;
+	@include adaptiv-value("margin-top", 50, 15);
+	&__row {
+		display: grid;
+		//grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+		grid-template-columns: 1fr;
+		@media (min-width: $sm) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (min-width: $lg) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		justify-content: center;
+		@include adaptiv-value("gap", 30, 15);
+	}
+
+	&__item {
+		@include adaptiv-value("padding-top", 50, 15);
+		@include adaptiv-value("padding-right", 46, 20);
+		@include adaptiv-value("padding-bottom", 50, 15);
+		@include adaptiv-value("padding-left", 35, 20);
+		background: #1c2752;
+	}
+
+	&__img {
+	}
+
+	&__title {
+		margin-top: 20px;
+		color: $orange;
+		font-family: "Mulish";
+		@include adaptiv-value("font-size", 25, 22);
+	}
+
+	&__text {
+		margin-top: 15px;
+		color: #d2d2d2;
+		line-height: 27px;
+	}
+
+	&__more {
+		margin-top: 22px;
+		color: white;
+		transition: color 0.3s linear;
+		cursor: pointer;
+		&:hover {
+			color: darken(white, 30%);
+		}
+	}
+}

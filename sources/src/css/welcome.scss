@@ -86,7 +86,11 @@
 
 	&__box {
 		background: #f4f4f4;
-		padding: 24px 51px 40px 51px;
+		@include adaptiv-value("padding-top", 24, 12);
+		@include adaptiv-value("padding-right", 51, 20);
+		@include adaptiv-value("padding-bottom", 40, 20);
+		@include adaptiv-value("padding-left", 51, 23);
+
 		text-align: center;
 	}
 
@@ -97,24 +101,31 @@
 	}
 
 	&__text {
-		margin-top: 16px;
+		@include adaptiv-value("margin-top", 16, 10);
 		font-size: 20px;
 		font-family: "Mulish";
 	}
 
 	&__list {
 		flex: 1 1 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media (min-width: $sm) {
+			align-items: flex-start;
+		}
 	}
 	&__item {
 		margin-top: 10px;
 		color: #7e7e7e;
-		white-space: nowrap;
+		text-align: center;
+		@media (min-width: $smm) {
+			text-align: initial;
+			white-space: nowrap;
+		}
 		&:before {
 			content: "-";
 			padding-right: 5px;
-		}
-		@media (min-width: $sm) {
-			padding-left: 12px;
 		}
 	}
 }
