@@ -11,7 +11,13 @@
 		align-items: center;
 		justify-content: space-between;
 	}
-
+	transition: background-color 0.3s linear;
+	&__sticky {
+		background-color: rgb(202, 202, 202);
+	}
+	&__sticky .navigation {
+		box-shadow: -1px 6px 18px rgba(0, 0, 0, 0.09);
+	}
 	&__contacts {
 		display: flex;
 	}

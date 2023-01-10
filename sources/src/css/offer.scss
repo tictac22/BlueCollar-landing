@@ -1,0 +1,144 @@
+.offer {
+	background-color: $orange;
+	@include adaptiv-value("padding-top", 140, 20);
+	text-align: center;
+	&__subtitle {
+	}
+
+	&__title {
+		margin-top: 22px;
+		color: #1c2752;
+		@include adaptiv-value("font-size", 45, 18);
+		font-family: "Mulish";
+	}
+	&__text {
+		margin: 0 auto;
+		margin-top: 12px;
+		color: #1c2752;
+		max-width: 832px;
+		font-size: 18px;
+	}
+
+	&__areas {
+	}
+}
+.container {
+}
+.offer-subtitle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: #f4f4f4;
+	padding: 0px 10px;
+	&__img {
+	}
+
+	&__text {
+		margin-left: 10px;
+	}
+}
+
+.offer-areas {
+	display: flex;
+	margin-top: 40px;
+	gap: 30px;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	&__item {
+		border: 1px solid #1c2752;
+		padding: 20px 40px;
+		@include adaptiv-value("padding-top", 20, 10);
+		@include adaptiv-value("padding-right", 40, 20);
+		@include adaptiv-value("padding-bottom", 20, 10);
+		@include adaptiv-value("padding-left", 40, 20);
+
+		min-width: 249px;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__img {
+	}
+
+	&__text {
+		color: #222222;
+		font-size: 20px;
+		margin-left: 10px;
+	}
+}
+
+.commercal {
+	@include adaptiv-value("margin-top", 40, 15);
+	@include adaptiv-value("padding", 60, 20);
+	box-shadow: -1px 6px 18px rgba(0, 0, 0, 0.09);
+
+	text-align: left;
+	background-color: white;
+	&__grid {
+		display: grid;
+		gap: 60px;
+		@include adaptiv-value("gap", 60, 15);
+		grid-template-columns: 1fr;
+		@media (min-width: $smm) {
+			grid-template-rows: 1fr 1fr;
+		}
+		@media (min-width: $lg) {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+		}
+	}
+
+	&__decsr {
+	}
+
+	&__title {
+		margin-top: 22px;
+		font-family: "Mulish";
+		@include adaptiv-value("font-size", 45, 20);
+
+		color: #1c2752;
+	}
+
+	&__text {
+		margin-top: 15px;
+		font-size: 18px;
+		color: #7e7e7e;
+	}
+
+	&__button {
+		margin-top: 30px;
+	}
+
+	&__img {
+		margin-top: 12px;
+		position: relative;
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+.commercal-subtitle {
+	display: inline-flex;
+	align-items: center;
+	padding: 0px 10px;
+	background-color: #f4f4f4;
+	&__img {
+	}
+
+	&__text {
+		font-size: 17px;
+		color: #1c2752;
+		margin-left: 8px;
+		line-height: 27px;
+	}
+}

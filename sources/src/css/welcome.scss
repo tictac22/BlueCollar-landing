@@ -8,7 +8,9 @@
 		gap: 50px;
 		@include adaptiv-value("gap", 50, 20);
 		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr;
+		@media (min-width: $smm) {
+			grid-template-rows: 1fr 1fr;
+		}
 		@media (min-width: $lg) {
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: 1fr;
