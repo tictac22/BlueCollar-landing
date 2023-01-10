@@ -40,3 +40,15 @@ function shuffleElement(match) {
 		})
 	}
 }
+
+const header = document.querySelector(".header")
+const headerBody = document.querySelector(".header__body")
+const observer = new IntersectionObserver((element) => {
+	console.log(element[0].isIntersecting)
+	if (element[0].isIntersecting) {
+		element[0].target.classList.remove("header__sticky")
+	} else {
+		element[0].target.classList.add("header__sticky")
+	}
+})
+observer.observe(header)
