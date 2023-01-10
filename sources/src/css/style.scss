@@ -7,6 +7,11 @@
 		font-style: #{$style};
 	}
 }
+$maketWidth: 1440;
+@mixin adaptiv-value($property, $startSize, $minSize) {
+	$addSize: $startSize - $minSize;
+	#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maketWidth - 320}));
+}
 @import "reset.scss";
 @import "fonts.scss";
 @import "variables.scss";
@@ -30,7 +35,23 @@ body {
 .main {
 	flex: 1 1 auto;
 }
+.button {
+	color: #1c2752;
+	letter-spacing: 0.36px;
+	font-size: 20px;
+	padding: 20px 40px;
+	background-color: $orange;
+	transition: background-color 0.3s linear;
+	@include adaptiv-value("padding-bottom", 20, 10);
+	@include adaptiv-value("padding-top", 20, 10);
+	@include adaptiv-value("padding-left", 40, 20);
+	@include adaptiv-value("padding-right", 40, 20);
 
+	cursor: pointer;
+	&:hover {
+		background-color: darken($orange, 10%);
+	}
+}
 .underline {
 	&::before {
 		transition: width 0.4s ease-in-out;
@@ -44,3 +65,5 @@ body {
 
 @import "opening.scss";
 @import "header.scss";
+@import "hero.scss";
+@import "welcome.scss";

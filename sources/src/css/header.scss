@@ -1,5 +1,12 @@
 .header {
-	padding: 40px 0px;
+	//padding: 40px 0px;
+	@include adaptiv-value("padding-top", 40, 5);
+	@include adaptiv-value("padding-bottom", 40, 5);
+	position: sticky;
+	background-color: white;
+	width: 100%;
+	z-index: 100;
+	top: 0;
 	&__inner {
 		display: flex;
 		align-items: center;
@@ -137,7 +144,7 @@
 		pointer-events: all;
 	}
 	@media (min-width: $lg) {
-		margin-top: 40px;
+		margin-top: 20px;
 		clip-path: none;
 		max-width: initial;
 		width: initial;
@@ -148,6 +155,7 @@
 		transform: translate(0);
 		opacity: 1;
 		pointer-events: all;
+		margin-bottom: -95px;
 	}
 	&__inner {
 		overflow: scroll;
