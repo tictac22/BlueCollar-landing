@@ -5,6 +5,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-direction: column;
+		@media (min-width: $smm) {
+			flex-direction: row;
+		}
 	}
 
 	&__text {
@@ -12,6 +16,10 @@
 	}
 
 	&__socials {
+		margin-top: 10px;
+		@media (min-width: $smm) {
+			margin-top: 0px;
+		}
 	}
 
 	&__social {

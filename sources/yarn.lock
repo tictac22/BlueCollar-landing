@@ -3740,6 +3740,11 @@ group-css-media-queries@^1.4.1:
     css-parse "^2.0.0"
     css-stringify "^2.0.0"
 
+gsap@^3.11.4:
+  version "3.11.4"
+  resolved "https://registry.npmjs.org/gsap/-/gsap-3.11.4.tgz#e6d972d3509a7431b86d81d6fc3bbeb6862e5ff1"
+  integrity sha512-McHhEguHyExMMnjqKA8G+7TvxmlKQGMbjgwAilnFe1e4id7V/tFveRQ2YMZhTYu0oxHGWvbPltdVYQOu3z1SCA==
+
 gulp-autoprefixer@^7.0.1:
   version "7.0.1"
   resolved "https://registry.npmjs.org/gulp-autoprefixer/-/gulp-autoprefixer-7.0.1.tgz#3c0dc26afc802d317e7560a7f760a0399049075a"

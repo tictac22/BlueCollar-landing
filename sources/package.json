@@ -42,6 +42,7 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
+		"gsap": "^3.11.4",
 		"gulp": "^4.0.2"
 	},
 	"browserslist": {
