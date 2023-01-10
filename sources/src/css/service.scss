@@ -1,5 +1,6 @@
 .service {
 	@include adaptiv-value("padding-top", 200, 95);
+	@include adaptiv-value("padding-bottom", 140, 25);
 	text-align: center;
 	background: #f4f4f4;
 	&__title {
@@ -36,7 +37,6 @@
 	@include adaptiv-value("margin-top", 50, 15);
 	&__row {
 		display: grid;
-		//grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
 		grid-template-columns: 1fr;
 		@media (min-width: $sm) {
 			grid-template-columns: 1fr 1fr;

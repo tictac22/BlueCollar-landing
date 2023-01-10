@@ -68,9 +68,14 @@ body {
 	color: #1c2752;
 	font-family: "Mulish";
 }
+.text {
+	color: #7e7e7e;
+	font-size: 17px;
+}
 @import "opening.scss";
 @import "header.scss";
 @import "hero.scss";
 @import "welcome.scss";
 @import "offer.scss";
 @import "service.scss";
+@import "why.scss";

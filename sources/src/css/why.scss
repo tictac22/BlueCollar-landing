@@ -1,0 +1,146 @@
+.why {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		@media (min-width: $lg) {
+			flex-direction: row;
+		}
+	}
+
+	&__stats {
+	}
+
+	&__we {
+	}
+
+	&__title {
+	}
+
+	&__text {
+	}
+
+	&__facts {
+	}
+}
+.why-stats {
+	order: 1;
+	@media (min-width: $lg) {
+		flex: 1 1 50%;
+		order: -1;
+	}
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	&__inner {
+		@media (min-width: $sm) {
+			padding: 50px;
+		}
+		background-clip: content-box;
+	}
+	&__body {
+		background: rgba(28, 39, 82, 0.86);
+		@include adaptiv-value("padding-top", 100, 20);
+		@include adaptiv-value("padding-right", 80, 10);
+		@include adaptiv-value("padding-bottom", 120, 40);
+		@include adaptiv-value("padding-left", 80, 10);
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		@media (min-width: $sm) {
+			flex-direction: row;
+		}
+		@media (min-width: $lg) {
+			white-space: nowrap;
+			max-width: 400px;
+		}
+		&:not(:first-child) {
+			margin-top: 25px;
+		}
+	}
+
+	&__amount {
+		font-family: "Mulish";
+		font-size: 24px;
+		color: white;
+		@media (min-width: $sm) {
+			padding: 16px 28px 16px 21px;
+			color: #1c2752;
+			background-color: $orange;
+			min-width: 111px;
+		}
+	}
+
+	&__text {
+		font-size: 25px;
+		font-family: "Mulish";
+		color: #fff;
+		width: 100%;
+		text-align: center;
+		@media (min-width: $sm) {
+			padding: 14px;
+			padding-left: 20px;
+			border-top: 1px solid #fff;
+			border-right: 1px solid #fff;
+			border-bottom: 1px solid #fff;
+		}
+	}
+}
+.why-we {
+	flex: 1 1 50%;
+	@include adaptiv-value("padding-top", 102, 23);
+	@include adaptiv-value("padding-right", 60, 10);
+	@include adaptiv-value("padding-bottom", 107, 13);
+	@include adaptiv-value("padding-left", 70, 20);
+	&__title {
+		margin-top: 22px;
+	}
+	&__text {
+		margin-top: 11px;
+	}
+}
+
+.why-subtitle {
+	display: inline-flex;
+	align-items: center;
+	padding: 0px 10px;
+	background: #f4f4f4;
+	&__img {
+	}
+
+	&__text {
+		color: #1c2752;
+		font-size: 18px;
+		margin-left: 10px;
+	}
+}
+
+.title {
+}
+.text {
+}
+.why-facts {
+	&__items {
+		margin-top: 40px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: flex-start;
+		&:not(:first-child) {
+			margin-top: 25px;
+		}
+	}
+	&__descr {
+		display: flex;
+		flex-direction: column;
+		margin-left: 20px;
+	}
+	&__title {
+	}
+
+	&__text {
+		margin-top: 8px;
+	}
+}
