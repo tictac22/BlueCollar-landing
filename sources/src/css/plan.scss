@@ -1,0 +1,191 @@
+.plan {
+	background-color: #f4f4f4;
+	@media (max-width: $lg) {
+		text-align: center;
+	}
+	@include adaptiv-value("padding-top", 140, 20);
+	@include adaptiv-value("padding-bottom", 140, 20);
+	&__text {
+		margin-top: 22px;
+		align-items: flex-start;
+		@media (min-width: $lg) {
+			display: flex;
+			text-align: initial;
+			justify-content: space-between;
+		}
+	}
+	&__descr {
+		margin-left: 20px;
+	}
+	@media (max-width: $lg) {
+		&__descr {
+			margin-top: 15px;
+		}
+	}
+	@media (min-width: $lg) {
+		&__title {
+			max-width: 497px;
+		}
+
+		&__descr {
+			max-width: 575px;
+		}
+	}
+}
+.plan-subtitle {
+	@media (max-width: $lg) {
+		margin: 0 auto;
+	}
+	background-color: white;
+
+	&__img {
+	}
+
+	&__text {
+	}
+}
+.plans {
+	&__grid {
+		display: grid;
+		@include adaptiv-value("margin-top", 40, 10);
+		@include adaptiv-value("gap", 30, 10);
+		grid-template-columns: repeat(auto-fit, minmax(273px, 1fr));
+		text-align: initial;
+		//display: flex;
+	}
+
+	&__row {
+		@include adaptiv-value("padding-top", 40, 10);
+		@include adaptiv-value("padding-right", 40, 10);
+		@include adaptiv-value("padding-bottom", 40, 10);
+		@include adaptiv-value("padding-left", 40, 10);
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 380px;
+	}
+
+	&__title {
+		color: #1c2752;
+		text-align: center;
+		@media (min-width: 1150px) {
+			text-align: initial;
+		}
+	}
+
+	&__descr {
+		margin-top: 7px;
+	}
+
+	&__price {
+		color: #1c2752;
+		@include adaptiv-value("font-size", 32, 22);
+	}
+
+	&__wrapper {
+		position: relative;
+		text-align: center;
+		@media (min-width: 1150px) {
+			justify-content: space-between;
+			align-items: center;
+			display: flex;
+			text-align: initial;
+		}
+	}
+	&__additional {
+		position: relative;
+		@media (max-width: 1150px) {
+			margin-top: 10px;
+		}
+	}
+	&__tag {
+		@media (min-width: 1150px) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin-top: 0px;
+		}
+		font-size: 16px;
+		text-transform: uppercase;
+		padding: 2px;
+		color: #1c2752;
+		background-color: $orange;
+		transition: color 0.3s ease;
+		&:hover {
+			color: lighten(#1c2752, 15);
+		}
+	}
+
+	&__type {
+		font-size: 15px;
+		color: #7e7e7e;
+		padding-top: 10px;
+		@media (min-width: 1150px) {
+			padding-top: 30px;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__line {
+		border: 1px solid #dddddd;
+		@include adaptiv-value("margin-top", 40, 15);
+		@include adaptiv-value("margin-bottom", 30, 10);
+	}
+	&__list {
+		flex: 1 1 auto;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		position: relative;
+		grid-column: span 2;
+		&:not(:first-child) {
+			@include adaptiv-value("margin-top", 20, 10);
+		}
+		&::before {
+			margin-right: 12px;
+		}
+		& img {
+			margin-right: 12px;
+		}
+	}
+	&__button {
+		@include adaptiv-value("margin-top", 55, 15);
+		width: 100%;
+	}
+}
+.benefits {
+	@include adaptiv-value("margin-top", 60, 15);
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	@media (min-width: $sm) {
+		flex-direction: row;
+	}
+	@include adaptiv-value("gap", 70, 10);
+	&__item {
+		display: flex;
+		align-items: flex-start;
+	}
+	&__descr {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		padding-left: 42px;
+		& img {
+			position: absolute;
+			top: -5px;
+			left: 0;
+		}
+	}
+	&__text {
+		margin-top: 10px;
+		text-align: left;
+		max-width: 500px;
+	}
+
+	&__title {
+		text-align: left;
+	}
+}

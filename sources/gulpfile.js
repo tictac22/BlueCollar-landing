@@ -98,7 +98,6 @@ const js = () => {
 				output: {
 					filename: "main.min.js",
 				},
-				module: {},
 			})
 		)
 		.pipe(gulp.dest("./build/js"))

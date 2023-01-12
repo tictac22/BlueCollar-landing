@@ -11,6 +11,9 @@ $maketWidth: 1440;
 @mixin adaptiv-value($property, $startSize, $minSize) {
 	$addSize: $startSize - $minSize;
 	#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maketWidth - 320}));
+	@media (min-width: #{$maketWidth + px}) {
+		#{$property}: #{$startSize + px};
+	}
 }
 @import "reset.scss";
 @import "fonts.scss";
@@ -96,3 +99,43 @@ body {
 @import "../../node_modules/swiper/swiper.scss";
 
 @import "clients.scss";
+@import "plan.scss";
+
+// <div class="benefits">
+// 							<div class="benefits__item">
+// 								<div class="benefits__descr">
+// 									<img src="img/icons/accept.svg" />
+// 									<div class="benefits__title">Affordable</div>
+// 								</div>
+// 								<div class="benefits__text text">
+// 									We adhere strictly to the current National Electrical Code, and we conduct regular
+// 									in-house sessions with our technicians to review any code changes and applications.
+// 								</div>
+// 							</div>
+// 							<div class="benefits__item">
+// 								<div class="benefits__descr">
+// 									<img src="img/icons/accept.svg" />
+// 									<div class="benefits__title">Fixed Plan</div>
+// 								</div>
+// 								<div class="benefits__text text">
+// 									We understand fully that your time is of extreme value. You will never have to worry
+// 									about waiting around for our trained technicians.24/7 Service Providers Affordable
+// 									Price.
+// 								</div>
+// 							</div>
+// </div>
+
+// &__descr {
+// 		display: flex;
+// 		align-items: center;
+// 	}
+// 	&__text {
+// 		margin-top: 10px;
+// 		text-align: left;
+// 		max-width: 500px;
+// 	}
+
+// 	&__title {
+// 		text-align: left;
+// 		margin-left: 10px;
+// 	}
