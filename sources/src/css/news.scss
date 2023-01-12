@@ -1,0 +1,124 @@
+.news {
+	@include adaptiv-value("margin-top", 118, 10);
+	@include adaptiv-value("margin-bottom", 140, 10);
+	&-subtitle {
+		text-align: center;
+	}
+	&__title {
+		margin-top: 22px;
+		text-align: center;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-content: center;
+		@include adaptiv-value("gap", 30, 20);
+		@include adaptiv-value("margin-top", 40, 15);
+
+		@media (min-width: $md) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__img {
+		position: relative;
+		height: 363px;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__date {
+		display: flex;
+		flex-direction: column;
+		margin-top: 10px;
+		flex-direction: column;
+		@media (min-width: $lg) {
+			flex-direction: row;
+			margin-top: -34px;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&__who,
+	&__when {
+		display: flex;
+		@include adaptiv-value("padding-top", 20, 10);
+		@include adaptiv-value("padding-left", 40, 20);
+		@include adaptiv-value("padding-bottom", 20, 10);
+		@include adaptiv-value("padding-right", 40, 20);
+		position: relative;
+		z-index: 2;
+		align-items: center;
+		@media (min-width: $lg) {
+			min-width: initial;
+		}
+		& img {
+			height: 20px;
+			width: 20px;
+		}
+	}
+	&__who {
+		background-color: #ffc368;
+		margin-bottom: 10px;
+		@media (min-width: $lg) {
+			margin-bottom: 0px;
+			margin-right: -1px;
+		}
+	}
+
+	&__name,
+	&__time {
+		font-size: 15px;
+		color: #1c2752;
+		margin-left: 10px;
+	}
+
+	&__when {
+		background-color: #ffb342;
+	}
+
+	&__subtitle {
+		@include adaptiv-value("margin-top", 20, 10);
+		font-family: "Mulish";
+		font-size: 30px;
+		color: #1c2752;
+	}
+	&__text {
+		@include adaptiv-value("margin-top", 16, 10);
+		line-height: 27px;
+		flex: 1 1 auto;
+	}
+	&__more {
+		@include adaptiv-value("margin-top", 17, 10);
+	}
+}
+.news-more {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	margin-right: auto;
+	&__text {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	& img {
+		margin-left: 10px;
+		padding-top: 2px;
+		transition: transform 0.3s ease;
+	}
+	&:hover {
+		& img {
+			transform: translateX(10px);
+		}
+	}
+}

@@ -36,12 +36,12 @@
 	@media (max-width: $lg) {
 		margin: 0 auto;
 	}
-	background-color: white;
 
 	&__img {
 	}
 
 	&__text {
+		background-color: white;
 	}
 }
 .plans {

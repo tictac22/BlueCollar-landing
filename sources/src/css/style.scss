@@ -76,10 +76,14 @@ body {
 	font-size: 17px;
 }
 .subtitle {
-	display: inline-flex;
 	align-items: center;
 	padding: 0px 10px;
-	background: #f4f4f4;
+	&__wrapper {
+		background: #f4f4f4;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
 	&__text {
 		color: #1c2752;
 		font-size: 18px;
@@ -100,42 +104,4 @@ body {
 
 @import "clients.scss";
 @import "plan.scss";
-
-// <div class="benefits">
-// 							<div class="benefits__item">
-// 								<div class="benefits__descr">
-// 									<img src="img/icons/accept.svg" />
-// 									<div class="benefits__title">Affordable</div>
-// 								</div>
-// 								<div class="benefits__text text">
-// 									We adhere strictly to the current National Electrical Code, and we conduct regular
-// 									in-house sessions with our technicians to review any code changes and applications.
-// 								</div>
-// 							</div>
-// 							<div class="benefits__item">
-// 								<div class="benefits__descr">
-// 									<img src="img/icons/accept.svg" />
-// 									<div class="benefits__title">Fixed Plan</div>
-// 								</div>
-// 								<div class="benefits__text text">
-// 									We understand fully that your time is of extreme value. You will never have to worry
-// 									about waiting around for our trained technicians.24/7 Service Providers Affordable
-// 									Price.
-// 								</div>
-// 							</div>
-// </div>
-
-// &__descr {
-// 		display: flex;
-// 		align-items: center;
-// 	}
-// 	&__text {
-// 		margin-top: 10px;
-// 		text-align: left;
-// 		max-width: 500px;
-// 	}
-
-// 	&__title {
-// 		text-align: left;
-// 		margin-left: 10px;
-// 	}
+@import "news.scss";
