@@ -1,0 +1,132 @@
+.footer {
+	@include adaptiv-value("padding-top", 59, 15);
+	padding-bottom: 30px;
+	background-color: #1c2752;
+	&_logo {
+	}
+
+	&__header {
+		display: flex;
+		@include adaptiv-value("padding-bottom", 30, 10);
+		@include adaptiv-value("gap", 30, 10);
+
+		//border-bottom: 1px solid #dddddd;
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr;
+		@media (min-width: $sm) {
+			grid-template-columns: 1fr 1fr;
+			justify-items: center;
+		}
+		@media (min-width: $xl) {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
+	&__nav {
+		display: grid;
+		grid-template-columns: 1fr;
+		@media (min-width: $md) {
+			grid-template-columns: 1fr 1fr;
+		}
+		justify-items: center;
+		@media (min-width: $lg) {
+			grid-template-columns: 400px 1fr 1fr 1fr;
+		}
+		gap: 40px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__text {
+		color: #ffffff;
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		@include adaptiv-value("margin-top", 52, 10);
+		justify-content: center;
+		@media (min-width: $lg) {
+			justify-content: flex-start;
+		}
+	}
+
+	&__social {
+		background: #2c3765;
+		padding: 20px;
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+		border-radius: 100px;
+		& svg {
+			stroke: white;
+		}
+	}
+
+	&__title {
+		font-family: "Mulish";
+		font-size: 20px;
+		color: #ffb342;
+	}
+
+	&__list {
+		margin-top: 10px;
+	}
+	&__item {
+		&-socials {
+			position: relative;
+			@include adaptiv-value("margin-top", 96, 10);
+
+			// &::before {
+			// 	content: "";
+			// 	position: absolute;
+			// 	top: 0;
+			// 	right: 0;
+			// 	height: 100%;
+			// 	width: 1px;
+			// 	background-color: #ddd;
+			text-align: center;
+			@media (min-width: $lg) {
+				text-align: initial;
+			}
+			// }
+		}
+		&-explore {
+		}
+	}
+	&__link {
+		color: white;
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.footer-contact {
+	display: flex;
+	&__img {
+	}
+
+	&__descr {
+		color: white;
+	}
+
+	&__to {
+		color: white;
+		position: relative;
+		&::before {
+			background-color: white;
+		}
+	}
+	&__text {
+		margin-left: 15px;
+		cursor: pointer;
+		&:hover .footer-contact__to:before {
+			width: 100%;
+		}
+	}
+}
