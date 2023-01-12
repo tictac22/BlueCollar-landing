@@ -1,5 +1,7 @@
 import { menuTl } from "./gsap.js"
 
+import Swiper, { Navigation, Pagination } from "swiper"
+
 let mql = window.matchMedia("(max-width: 768px)")
 if (mql.matches) shuffleElement(mql.matches)
 mql.addEventListener("change", (event) => shuffleElement(event.matches))
@@ -51,3 +53,23 @@ const observer = new IntersectionObserver((element) => {
 	}
 })
 observer.observe(opening)
+
+new Swiper(".swiper", {
+	loop: true,
+	// If we need pagination
+	pagination: {
+		el: ".swiper-pagination",
+	},
+	speed: 500,
+	// Navigation arrows
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+
+	// And if we need scrollbar
+	scrollbar: {
+		el: ".swiper-scrollbar",
+	},
+	modules: [Navigation, Pagination],
+})

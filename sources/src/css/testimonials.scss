@@ -1,0 +1,246 @@
+.testimonials {
+	@include adaptiv-value("padding-top", 150, 20);
+	@include adaptiv-value("padding-bottom", 100, 20);
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		@media (min-width: $lg) {
+			flex-direction: row;
+		}
+		@include adaptiv-value("gap", 40, 10);
+	}
+
+	&__reviews {
+		min-width: 0;
+	}
+	&__form {
+		flex: 0 1 50%;
+	}
+}
+
+.reviews {
+	flex: 0 1 50%;
+	&__title {
+		@include adaptiv-value("margin-top", 20, 10);
+	}
+	&__slider {
+		padding: 40px;
+		border: 1px solid #f4f4f4;
+		@include adaptiv-value("margin-top", 42, 10);
+	}
+}
+
+.slider {
+	&__text {
+		font-weight: 700;
+
+		color: #7e7e7e;
+		& span {
+			color: #1c2752;
+		}
+	}
+	&__line {
+		border: 1px solid #f4f4f4;
+		@include adaptiv-value("margin-top", 30, 15);
+		@include adaptiv-value("margin-bottom", 20, 10);
+	}
+	&__arrows {
+		display: flex;
+		margin-top: 15px;
+	}
+	&-arrow {
+		user-select: none;
+		&__body {
+			border-radius: 50%;
+			display: flex;
+			padding: 20px;
+			background: #f4f4f4;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in;
+			&:hover,
+			&:focus {
+				background-color: darken(#f4f4f4, 15%);
+			}
+		}
+		& img {
+			user-select: none;
+		}
+		&:first-child {
+			margin-right: 20px;
+			img {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+}
+.client {
+	display: flex;
+	align-items: center;
+	&__info {
+		display: flex;
+		flex-direction: column;
+		margin-left: 10px;
+	}
+	&__img {
+		width: 70px;
+		height: 70px;
+		object-fit: cover;
+	}
+	&__name {
+		font-family: "Mulish";
+		font-size: 22px;
+		color: #1c2752;
+	}
+
+	&__city {
+		color: #7e7e7e;
+	}
+
+	&__quote {
+		margin-left: auto;
+		display: none;
+		@media (min-width: $md) {
+			display: block;
+		}
+	}
+}
+
+.question {
+	background: #ffb342;
+	@include adaptiv-value("margin-top", 40, 10);
+	&__inner {
+		@include adaptiv-value("padding-top", 50, 10);
+		@include adaptiv-value("padding-right", 40, 15);
+		@include adaptiv-value("padding-bottom", 50, 10);
+		@include adaptiv-value("padding-left", 40, 15);
+	}
+	&__title {
+		@include adaptiv-value("margin-top", 21, 10);
+		font-family: "Mulish";
+		@include adaptiv-value("font-size", 25, 20);
+		color: #1c2752;
+	}
+
+	&__text {
+		margin-top: 13px;
+		color: #1c2752;
+	}
+
+	&__contact {
+		display: flex;
+		@include adaptiv-value("margin-top", 20, 10);
+		flex-direction: column;
+		align-items: flex-start;
+		@media (min-width: $md) {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+
+	&__phone {
+		font-family: "Mulish";
+		@include adaptiv-value("font-size", 30, 20);
+		color: #ffffff;
+		margin-top: 10px;
+		@media (min-width: $md) {
+			margin-left: 20px;
+			margin-top: 0px;
+		}
+	}
+}
+
+.testimonials {
+	&__form {
+	}
+}
+.form {
+	&__title {
+		@include adaptiv-value("margin-top", 20, 10);
+	}
+
+	&__inner {
+		@include adaptiv-value("margin-top", 42, 10);
+		background: #f4f4f4;
+		@include adaptiv-value("padding-top", 70, 20);
+		@include adaptiv-value("padding-right", 40, 10);
+		@include adaptiv-value("padding-bottom", 40, 20);
+		@include adaptiv-value("padding-left", 70, 10);
+		display: flex;
+		flex-direction: column;
+	}
+	&__wrapper {
+		position: relative;
+		&:not(:first-child) {
+			margin-top: 25px;
+		}
+	}
+	&__input {
+		background: #ffffff;
+		border: 1px solid #cccccc;
+		padding: 20px 40px;
+		transition: border-color 0.3s ease;
+		width: 100%;
+		&::placeholder {
+			color: #1c2752;
+		}
+		&:focus {
+			border-color: darken(#cccccc, 10);
+		}
+		font-family: "Arial";
+	}
+	&__date {
+		position: relative;
+		&::-webkit-calendar-picker-indicator {
+			cursor: pointer;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			border: 1px solid red;
+		}
+	}
+	&__textarea {
+		min-height: 150px;
+		resize: vertical;
+		max-height: 300px;
+	}
+	&__button {
+		margin-top: 35px;
+		background-color: #ffb342;
+		padding: 20px 0px;
+		width: 100%;
+		color: #1c2752;
+		font-weight: 700;
+		transition: background-color 0.3s ease;
+		cursor: pointer;
+		display: block;
+		&:hover {
+			background-color: darken(#ffb342, 10);
+		}
+	}
+}
+.date {
+	&__img {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 50%;
+		right: 30px;
+		transform: translateY(-50%);
+	}
+}
+.form-subtitle {
+	&__img {
+	}
+
+	&__text {
+	}
+}
+.subtitle {
+	&__text {
+	}
+}
+.title {
+}
