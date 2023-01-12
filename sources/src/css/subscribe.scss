@@ -1,0 +1,93 @@
+.subscribe {
+	background-color: $orange;
+	@include adaptiv-value("padding-top", 140, 20);
+	@include adaptiv-value("padding-bottom", 40, 10);
+	@media (max-width: $lg) {
+		text-align: center;
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: column;
+		@media (min-width: $lg) {
+			flex-direction: row;
+		}
+	}
+
+	&__text {
+		@media (min-width: $lg) {
+			max-width: 410px;
+		}
+	}
+
+	&__title {
+		font-family: "Mulish";
+		font-size: 32px;
+		@include adaptiv-value("font-size", 32, 25);
+		color: #1c2752;
+	}
+
+	&__descr {
+		margin-top: 5px;
+		font-size: 18px;
+		line-height: 27px;
+		color: #1c2752;
+	}
+
+	&__form {
+	}
+}
+.subscribe-form {
+	flex: 1 1 50%;
+	@media (max-width: $lg) {
+		margin-top: 20px;
+	}
+	&__inner {
+		@media (min-width: $smm) {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+		@media (min-width: $lg) {
+			height: 68px;
+		}
+	}
+	&__input {
+		background-color: transparent;
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
+		border-left: 1px solid white;
+		border-right: 1px solid white;
+		@media (min-width: $smm) {
+			border-right: 1px solid transparent;
+		}
+		max-width: 454px;
+		padding: 25px 40px;
+		height: 70px;
+		width: 100%;
+
+		&::placeholder {
+			color: white;
+			font-size: 17px;
+		}
+	}
+	&__button {
+		padding: 25px 40px;
+		font-size: 17px;
+		background-color: white;
+		height: 70px;
+		width: 100%;
+		margin-top: 10px;
+		@media (min-width: $smm) {
+			margin-top: 0px;
+			width: 181px;
+		}
+		color: #1c2752;
+		transition: background-color 0.3s ease;
+		cursor: pointer;
+		&:hover {
+			background-color: darken(white, 4%);
+		}
+	}
+}
