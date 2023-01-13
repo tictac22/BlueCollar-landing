@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<div class="opening">
+			<div id="home" class="opening">
 				<div class="container">
 					<div class="opening__inner">
 						<p class="opening__text">Opening Hours: 06:00 to 20:00</p>
@@ -23,64 +23,15 @@
 					</div>
 				</div>
 			</div>
-			<header class="header">
-				<div class="container">
-					<div class="header__inner">
-						<div class="header__logo">
-							<a href="/" alt="logo"> @@include('./img/logo.svg') </a>
-						</div>
-						<div class="header__contacts">
-							<div class="header-contact">
-								<div class="header-contact__img">@@include('./img/icons/mail.svg')</div>
-								<a href="mailto:Info@bluecollar.com" class="header-contact__text">
-									<p class="header-contact__descr">Mail Us</p>
-									<div class="header-contact__to underline">Info@bluecollar.com</div>
-								</a>
-							</div>
-							<div class="header-contact">
-								<div class="header-contact__img">@@include('./img/icons/phone.svg')</div>
-								<a href="tel:+01569896654" class="header-contact__text">
-									<p class="header-contact__descr">Call Us</p>
-									<div class="header-contact__to underline">+01 569 896 654</div>
-								</a>
-							</div>
-						</div>
-						<div class="header__burger">
-							<span class="header__burger-span"></span>
-						</div>
-					</div>
-					<div class="navigation">
-						<div class="navigation__inner">
-							<ul class="navigation__list">
-								<li class="navigation__item">
-									<a href="#" class="navigation__link underline">Home</a>
-								</li>
-								<li class="navigation__item">
-									<a href="#" class="navigation__link underline">About Us</a>
-								</li>
-								<li class="navigation__item">
-									<a href="#" class="navigation__link underline">Pages</a>
-								</li>
-								<li class="navigation__item">
-									<a href="#" class="navigation__link underline">Blog</a>
-								</li>
-								<li class="navigation__item">
-									<a href="#" class="navigation__link underline">Contact Us</a>
-								</li>
-							</ul>
-							<button class="navigation__button">Have Any Questions?</button>
-						</div>
-					</div>
-				</div>
-			</header>
+			@@include('./html/header.html')
 			<main class="main">
 				<div class="hero">
-					<img class="hero__image" src="img/hero.png" />
+					<img loading="lazy" class="hero__image" src="img/hero.png" />
 					<div class="container">
 						<div class="hero__inner">
 							<div class="hero__text">
 								<div class="hero__descr hero-descr">
-									<img src="img/icons/gear.svg" alt="gear" class="hero-descr__img" />
+									<img loading="lazy" src="img/icons/gear.svg" alt="gear" class="hero-descr__img" />
 									<p class="hero-descr__text">
 										Improve our customers’ lives by providing effective solutions.
 									</p>
@@ -95,11 +46,16 @@
 					<div class="container">
 						<div class="welcome__inner">
 							<div class="welcome__img">
-								<img src="./img/welcome.jpg" alt="worker" />
+								<img loading="lazy" src="./img/welcome.jpg" alt="worker" />
 							</div>
 							<div class="welcome__about">
 								<div class="welcome__greetings welcome-greetings">
-									<img src="./img/icons/hatgear.svg" alt="gear" class="welcome-greetings__img" />
+									<img
+										loading="lazy"
+										src="./img/icons/hatgear.svg"
+										alt="gear"
+										class="welcome-greetings__img"
+									/>
 									<h3 class="welcome-greetings__text">Welcome BlueColla</h3>
 								</div>
 								<div class="welcome__title">We Provide Your Future</div>
@@ -133,10 +89,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="offer">
+				<div id="offer" class="offer">
 					<div class="container">
 						<div class="offer__subtitle offer-subtitle">
-							<img src="./img/icons/hatgear.svg" class="offer-subtitle__img" />
+							<img loading="lazy" src="./img/icons/hatgear.svg" class="offer-subtitle__img" />
 							<h4 class="offer-subtitle__text">What We Offer</h4>
 						</div>
 						<h3 class="offer__title">Professional Main Services</h3>
@@ -147,19 +103,34 @@
 						<div class="offer__areas offer-areas">
 							<div class="offer-areas__item">
 								<div class="offer-areas__row">
-									<img class="offer-areas__img" src="./img/icons/residential.svg" alt="commercial" />
+									<img
+										loading="lazy"
+										class="offer-areas__img"
+										src="./img/icons/residential.svg"
+										alt="commercial"
+									/>
 									<p class="offer-areas__text">Residential</p>
 								</div>
 							</div>
 							<div class="offer-areas__item">
 								<div class="offer-areas__row">
-									<img class="offer-areas__img" src="./img/icons/commercial.svg" alt="commercial" />
+									<img
+										loading="lazy"
+										class="offer-areas__img"
+										src="./img/icons/commercial.svg"
+										alt="commercial"
+									/>
 									<p class="offer-areas__text">Commercial</p>
 								</div>
 							</div>
 							<div class="offer-areas__item">
 								<div class="offer-areas__row">
-									<img class="offer-areas__img" src="./img/icons/industrial.svg" alt="commercial" />
+									<img
+										loading="lazy"
+										class="offer-areas__img"
+										src="./img/icons/industrial.svg"
+										alt="commercial"
+									/>
 									<p class="offer-areas__text">Industrial</p>
 								</div>
 							</div>
@@ -169,6 +140,7 @@
 								<div class="commercal__decsr">
 									<div class="commercal-subtitle">
 										<img
+											loading="lazy"
 											class="commercal-subtitle__img"
 											src="./img/icons/commerical.svg"
 											alt="commerical"
@@ -187,90 +159,97 @@
 									<button class="commercal__button button">Read More</button>
 								</div>
 								<div class="commercal__img">
-									<img src="./img/commercal.jpg" alt="commercial" />
+									<img loading="lazy" src="./img/commercal.jpg" alt="commercial" />
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="service">
-					<div class="container">
-						<div class="service-subtitle">
-							<img src="img/services/title-image.svg" alt="area" class="service-subtitle__img" />
-							<p class="service-subtitle__text">Area Of Service</p>
-						</div>
-						<h3 class="service__title title">Our Services</h3>
-						<p class="service__text">
-							We offers a comprehensive range of electrical services for domestic and commercial
-							properties at a reasonable price.
-						</p>
-						<div class="services">
-							<div class="services__row">
-								<div class="services__item">
-									<div class="services__img">
-										<img src="img/services/electrical.svg" alt="electrical" />
+					<div id="services">
+						<div class="container">
+							<div class="service-subtitle">
+								<img
+									loading="lazy"
+									src="img/services/title-image.svg"
+									alt="area"
+									class="service-subtitle__img"
+								/>
+								<p class="service-subtitle__text">Area Of Service</p>
+							</div>
+							<h3 class="service__title title">Our Services</h3>
+							<p class="service__text">
+								We offers a comprehensive range of electrical services for domestic and commercial
+								properties at a reasonable price.
+							</p>
+							<div class="services">
+								<div class="services__row">
+									<div class="services__item">
+										<div class="services__img">
+											<img loading="lazy" src="img/services/electrical.svg" alt="electrical" />
+										</div>
+										<h5 class="services__title">Electrical installation</h5>
+										<p class="services__text">
+											The art electrical installations that provide all the necessary electrical
+											solutions to suit your business, home or industrial premises.
+										</p>
+										<p class="services__more">View More</p>
 									</div>
-									<h5 class="services__title">Electrical installation</h5>
-									<p class="services__text">
-										The art electrical installations that provide all the necessary electrical
-										solutions to suit your business, home or industrial premises.
-									</p>
-									<p class="services__more">View More</p>
-								</div>
-								<div class="services__item">
-									<div class="services__img">
-										<img src="img/services/condition.svg" alt="condition" />
+									<div class="services__item">
+										<div class="services__img">
+											<img loading="lazy" src="img/services/condition.svg" alt="condition" />
+										</div>
+										<h5 class="services__title">Air condition service</h5>
+										<p class="services__text">
+											Services are able to service your entire electrical infrastructure from
+											Thermal Imaging of your air condition from switch boards.
+										</p>
+										<p class="services__more">View More</p>
 									</div>
-									<h5 class="services__title">Air condition service</h5>
-									<p class="services__text">
-										Services are able to service your entire electrical infrastructure from Thermal
-										Imaging of your air condition from switch boards.
-									</p>
-									<p class="services__more">View More</p>
-								</div>
-								<div class="services__item">
-									<div class="services__img">
-										<img src="img/services/builder.svg" alt="builder" />
+									<div class="services__item">
+										<div class="services__img">
+											<img loading="lazy" src="img/services/builder.svg" alt="builder" />
+										</div>
+										<h5 class="services__title">General Builder</h5>
+										<p class="services__text">
+											We provide impeccable safety assessments to both commercial, residential
+											properties. Our adept & knowledgeable electricians.
+										</p>
+										<p class="services__more">View More</p>
 									</div>
-									<h5 class="services__title">General Builder</h5>
-									<p class="services__text">
-										We provide impeccable safety assessments to both commercial, residential
-										properties. Our adept & knowledgeable electricians.
-									</p>
-									<p class="services__more">View More</p>
-								</div>
-								<div class="services__item">
-									<div class="services__img">
-										<img src="img/services/security.svg" alt="security" />
+									<div class="services__item">
+										<div class="services__img">
+											<img loading="lazy" src="img/services/security.svg" alt="security" />
+										</div>
+										<h5 class="services__title">Security System</h5>
+										<p class="services__text">
+											Utilized for measuring flow, temperature level & pressure in the
+											manufacturing industry array of technology is ensure productivity.
+										</p>
+										<p class="services__more">View More</p>
 									</div>
-									<h5 class="services__title">Security System</h5>
-									<p class="services__text">
-										Utilized for measuring flow, temperature level & pressure in the manufacturing
-										industry array of technology is ensure productivity.
-									</p>
-									<p class="services__more">View More</p>
-								</div>
-								<div class="services__item">
-									<div class="services__img">
-										<img src="img/services/maintaince.svg" alt="maintaince" />
+									<div class="services__item">
+										<div class="services__img">
+											<img loading="lazy" src="img/services/maintaince.svg" alt="maintaince" />
+										</div>
+										<h5 class="services__title">Service & maintenance</h5>
+										<p class="services__text">
+											Electrical Services are able to service your entire electrical
+											infrastructure from Thermal Imaging of your switch boards.
+										</p>
+										<p class="services__more">View More</p>
 									</div>
-									<h5 class="services__title">Service & maintenance</h5>
-									<p class="services__text">
-										Electrical Services are able to service your entire electrical infrastructure
-										from Thermal Imaging of your switch boards.
-									</p>
-									<p class="services__more">View More</p>
-								</div>
-								<div class="services__item">
-									<div class="services__img">
-										<img src="img/services/house.svg" alt="house" />
+									<div class="services__item">
+										<div class="services__img">
+											<img loading="lazy" src="img/services/house.svg" alt="house" />
+										</div>
+										<h5 class="services__title">House Extensions</h5>
+										<p class="services__text">
+											Traditionally, electricity is supplied through overhead network poles, where
+											the cable is connected to your building.
+										</p>
+										<p class="services__more">View More</p>
 									</div>
-									<h5 class="services__title">House Extensions</h5>
-									<p class="services__text">
-										Traditionally, electricity is supplied through overhead network poles, where the
-										cable is connected to your building.
-									</p>
-									<p class="services__more">View More</p>
 								</div>
 							</div>
 						</div>
@@ -302,7 +281,7 @@
 						</div>
 						<div class="why__we why-we">
 							<div class="why-subtitle">
-								<img class="why-subtitle__img" src="img/services/title-image.svg" />
+								<img loading="lazy" class="why-subtitle__img" src="img/services/title-image.svg" />
 								<h4 class="why-subtitle__text">Why Choose Us</h4>
 							</div>
 							<h3 class="why-we__title title">Few Reasons Why You Should Choose Us</h3>
@@ -314,7 +293,7 @@
 							<div class="why__facts why-facts">
 								<div class="why-facts__items">
 									<div class="why-facts__item">
-										<img src="img/icons/accept.svg" alt="ok" />
+										<img loading="lazy" src="img/icons/accept.svg" alt="ok" />
 										<div class="why-facts__descr">
 											<h4 class="why-facts__title">35 Years Experience</h4>
 											<p class="why-facts__text text">
@@ -324,7 +303,7 @@
 										</div>
 									</div>
 									<div class="why-facts__item">
-										<img src="img/icons/accept.svg" alt="ok" />
+										<img loading="lazy" src="img/icons/accept.svg" alt="ok" />
 										<div class="why-facts__descr">
 											<h4 class="why-facts__title">Excellence Certificate</h4>
 											<p class="why-facts__text text">
@@ -334,7 +313,7 @@
 										</div>
 									</div>
 									<div class="why-facts__item">
-										<img src="img/icons/accept.svg" alt="ok" />
+										<img loading="lazy" src="img/icons/accept.svg" alt="ok" />
 										<div class="why-facts__descr">
 											<h4 class="why-facts__title">Affordable Price</h4>
 											<p class="why-facts__text text">
@@ -348,10 +327,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="projects">
+				<div class="projects" id="projects">
 					<div class="projects-subtitle subtitle">
 						<div class="subtitle__wrapper">
-							<img class="projects-subtitle__text" src="img/services/title-image.svg" />
+							<img loading="lazy" class="projects-subtitle__text" src="img/services/title-image.svg" />
 							<h4 class="projects-subtitle__text subtitle__text">Why Choose Us</h4>
 						</div>
 					</div>
@@ -360,28 +339,28 @@
 						<div class="projects__grid">
 							<div class="projects__item">
 								<div class="projects__img">
-									<img src="img/projects/project1.jpg" alt="project1" />
+									<img loading="lazy" src="img/projects/project1.jpg" alt="project1" />
 								</div>
 								<h5 class="projects__text">Fiber cable change</h5>
 								<p class="projects__type">Commercial</p>
 							</div>
 							<div class="projects__item">
 								<div class="projects__img">
-									<img src="img/projects/project2.jpg" alt="project1" />
+									<img loading="lazy" src="img/projects/project2.jpg" alt="project1" />
 								</div>
 								<h5 class="projects__text">Industry machine issue</h5>
 								<p class="projects__type">Industry</p>
 							</div>
 							<div class="projects__item">
 								<div class="projects__img">
-									<img src="img/projects/project3.jpg" alt="project1" />
+									<img loading="lazy" src="img/projects/project3.jpg" alt="project1" />
 								</div>
 								<h5 class="projects__text">Wheel Alloy Change</h5>
 								<p class="projects__type">Residential</p>
 							</div>
 							<div class="projects__item">
 								<div class="projects__img">
-									<img src="img/projects/project4.jpg" alt="project1" />
+									<img loading="lazy" src="img/projects/project4.jpg" alt="project1" />
 								</div>
 								<h5 class="projects__text">Roof Cleaning</h5>
 								<p class="projects__type">Commercial</p>
@@ -389,13 +368,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="testimonials">
+				<div class="testimonials" id="contacts">
 					<div class="container">
 						<div class="testimonials__inner">
 							<div class="testimonials__reviews reviews">
 								<div class="reviews__subtitle subtitle">
 									<div class="subtitle__wrapper">
-										<img class="reviews__img" src="img/services/title-image.svg" />
+										<img loading="lazy" class="reviews__img" src="img/services/title-image.svg" />
 										<h4 class="reviews__text subtitle__text">Testimonial</h4>
 									</div>
 								</div>
@@ -405,13 +384,18 @@
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
 												<div class="slider__client client">
-													<img class="client__img" src="img/slider/client.jpg" alt="nancy" />
+													<img
+														loading="lazy"
+														class="client__img"
+														src="img/slider/client.jpg"
+														alt="nancy"
+													/>
 													<div class="client__info">
 														<h6 class="client__name">Nancy luther</h6>
 														<p class="client__city">NewYork</p>
 													</div>
 													<div class="client__quote">
-														<img src="img/slider/quote.svg" alt="quote" />
+														<img loading="lazy" src="img/slider/quote.svg" alt="quote" />
 													</div>
 												</div>
 												<hr class="slider__line" />
@@ -425,13 +409,18 @@
 											</div>
 											<div class="swiper-slide">
 												<div class="slider__client client">
-													<img class="client__img" src="img/slider/client.jpg" alt="nancy" />
+													<img
+														loading="lazy"
+														class="client__img"
+														src="img/slider/client.jpg"
+														alt="nancy"
+													/>
 													<div class="client__info">
 														<h6 class="client__name">Nancy luther</h6>
 														<p class="client__city">NewYork</p>
 													</div>
 													<div class="client__quote">
-														<img src="img/slider/quote.svg" alt="quote" />
+														<img loading="lazy" src="img/slider/quote.svg" alt="quote" />
 													</div>
 												</div>
 												<hr class="slider__line" />
@@ -445,13 +434,18 @@
 											</div>
 											<div class="swiper-slide">
 												<div class="slider__client client">
-													<img class="client__img" src="img/slider/client.jpg" alt="nancy" />
+													<img
+														loading="lazy"
+														class="client__img"
+														src="img/slider/client.jpg"
+														alt="nancy"
+													/>
 													<div class="client__info">
 														<h6 class="client__name">Nancy luther</h6>
 														<p class="client__city">NewYork</p>
 													</div>
 													<div class="client__quote">
-														<img src="img/slider/quote.svg" alt="quote" />
+														<img loading="lazy" src="img/slider/quote.svg" alt="quote" />
 													</div>
 												</div>
 												<hr class="slider__line" />
@@ -467,12 +461,12 @@
 										<div class="slider__arrows">
 											<div class="swiper-button-prev slider__prev slider-arrow">
 												<div class="slider-arrow__body">
-													<img src="img/slider/arrow.svg" alt="arrow-left" />
+													<img loading="lazy" src="img/slider/arrow.svg" alt="arrow-left" />
 												</div>
 											</div>
 											<div class="swiper-button-next">
 												<div class="slider-arrow__body">
-													<img src="img/slider/arrow.svg" alt="arrow-right" />
+													<img loading="lazy" src="img/slider/arrow.svg" alt="arrow-right" />
 												</div>
 											</div>
 										</div>
@@ -482,7 +476,11 @@
 									<div class="question__inner">
 										<div class="reviews__subtitle subtitle">
 											<div class="subtitle__wrapper">
-												<img class="reviews__img" src="img/services/title-image.svg" />
+												<img
+													loading="lazy"
+													class="reviews__img"
+													src="img/services/title-image.svg"
+												/>
 												<h4 class="reviews__text subtitle__text">Any question</h4>
 											</div>
 										</div>
@@ -491,7 +489,7 @@
 											If you have any questions or need help contact with our team, or call
 										</p>
 										<a href="tel:0031234567890" class="question__contact">
-											<img src="img/slider/call.svg" alt="phone" />
+											<img loading="lazy" src="img/slider/call.svg" alt="phone" />
 											<p class="question__phone">(003) 123 456 7890</p>
 										</a>
 									</div>
@@ -500,7 +498,11 @@
 							<form method="post" class="testimonials__form form">
 								<div class="form-subtitle subtitle">
 									<div class="subtitle__wrapper">
-										<img class="form-subtitle__img" src="img/services/title-image.svg" />
+										<img
+											loading="lazy"
+											class="form-subtitle__img"
+											src="img/services/title-image.svg"
+										/>
 
 										<h4 class="form-subtitle__text subtitle__text">Any question</h4>
 									</div>
@@ -518,7 +520,7 @@
 									</div>
 									<div class="form__wrapper">
 										<input class="form__input form__date" type="date" placeholder="Date" />
-										<img class="date__img" src="img/slider/date.svg" />
+										<img loading="lazy" class="date__img" src="img/slider/date.svg" />
 									</div>
 									<div class="form__wrapper">
 										<textarea
@@ -537,7 +539,7 @@
 				<div class="clients">
 					<div class="clients-subtitle subtitle">
 						<div class="subtitle__wrapper">
-							<img class="clients-subtitle__img" src="img/services/title-image.svg" />
+							<img loading="lazy" class="clients-subtitle__img" src="img/services/title-image.svg" />
 							<h4 class="clients-subtitle__text subtitle__text">Any question</h4>
 						</div>
 					</div>
@@ -546,54 +548,54 @@
 						<div class="clients__row">
 							<div class="clients__items">
 								<div class="clients__item">
-									<img src="img/clients/client1.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client1.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client2.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client2.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client3.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client3.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client4.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client4.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client1.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client1.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client2.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client2.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client3.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client3.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client4.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client4.svg" alt="client" />
 								</div>
 							</div>
 							<div class="clients__items">
 								<div class="clients__item">
-									<img src="img/clients/client1.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client1.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client2.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client2.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client3.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client3.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client4.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client4.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client1.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client1.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client2.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client2.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client3.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client3.svg" alt="client" />
 								</div>
 								<div class="clients__item">
-									<img src="img/clients/client4.svg" alt="client" />
+									<img loading="lazy" src="img/clients/client4.svg" alt="client" />
 								</div>
 							</div>
 						</div>
@@ -603,7 +605,7 @@
 					<div class="container">
 						<div class="plan-subtitle subtitle">
 							<div class="subtitle__wrapper plan-subtitle__text">
-								<img class="plan-subtitle__img" src="img/services/title-image.svg" />
+								<img loading="lazy" class="plan-subtitle__img" src="img/services/title-image.svg" />
 								<h4 class="subtitle__text">Price Plan</h4>
 							</div>
 						</div>
@@ -630,26 +632,32 @@
 									<hr class="plans__line" />
 									<ul class="plans__list">
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" />
+											<img loading="lazy" src="img/icons/ok.svg" />
 											<span>Electrical Service</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Distribution Power Systems</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Distribution Power Systems</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>High & Medium Voltages</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>High & Medium Voltages</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Industrial Control Systems</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Industrial Control Systems</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Switch Installation</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Switch Installation</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Generator Installations</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Generator Installations</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Innovative Construction</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Innovative Construction</span>
 										</li>
 									</ul>
 									<button class="plans__button button">Buy Now</button>
@@ -668,22 +676,26 @@
 									<hr class="plans__line" />
 									<ul class="plans__list">
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>PLC Controls</span>
+											<img loading="lazy" src="img/icons/ok.svg" /> <span>PLC Controls</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Conveyor systems</span>
+											<img loading="lazy" src="img/icons/ok.svg" /> <span>Conveyor systems</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Wiring renovations</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Wiring renovations</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Electric Water Heater Repair</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Electric Water Heater Repair</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Service And Panel Upgrades</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Service And Panel Upgrades</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Efficient Lighting Solutions</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Efficient Lighting Solutions</span>
 										</li>
 									</ul>
 									<button class="plans__button button">Buy Now</button>
@@ -701,26 +713,31 @@
 									<hr class="plans__line" />
 									<ul class="plans__list">
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" />
+											<img loading="lazy" src="img/icons/ok.svg" />
 											<span>Cable Tray Installations</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Wiring Upgrades</span>
+											<img loading="lazy" src="img/icons/ok.svg" /> <span>Wiring Upgrades</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Energy Efficient Lighting</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Energy Efficient Lighting</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Emergency Generating</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Emergency Generating</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Pools And Hot Tubs</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Pools And Hot Tubs</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Air Conditioning Units</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Air Conditioning Units</span>
 										</li>
 										<li class="plans__item text">
-											<img src="img/icons/ok.svg" /> <span>Generating Systems</span>
+											<img loading="lazy" src="img/icons/ok.svg" />
+											<span>Generating Systems</span>
 										</li>
 									</ul>
 									<button class="plans__button button">Buy Now</button>
@@ -730,7 +747,7 @@
 						<div class="benefits">
 							<div class="benefits__item">
 								<div class="benefits__descr">
-									<img src="img/icons/accept.svg" />
+									<img loading="lazy" src="img/icons/accept.svg" />
 
 									<div class="benefits__title">Affordable</div>
 									<div class="benefits__text text">
@@ -742,7 +759,7 @@
 							</div>
 							<div class="benefits__item">
 								<div class="benefits__descr">
-									<img src="img/icons/accept.svg" />
+									<img loading="lazy" src="img/icons/accept.svg" />
 
 									<div class="benefits__title">Fixed Plan</div>
 									<div class="benefits__text text">
@@ -759,7 +776,7 @@
 					<div class="container">
 						<div class="news-subtitle subtitle">
 							<div class="news-subtitle__wrapper subtitle__wrapper">
-								<img class="news-subtitle__img" src="img/services/title-image.svg" />
+								<img loading="lazy" class="news-subtitle__img" src="img/services/title-image.svg" />
 								<h4 class="news-subtitle__text subtitle__text">Stay Updated</h4>
 							</div>
 						</div>
@@ -767,15 +784,15 @@
 						<div class="news__grid">
 							<div class="news__item">
 								<div class="news__img">
-									<img src="img/hero.png" alt="news1" />
+									<img loading="lazy" src="img/hero.png" alt="news1" />
 								</div>
 								<div class="news__date">
 									<div class="news__who">
-										<img src="img/news/user.svg" alt="user" />
+										<img loading="lazy" src="img/news/user.svg" alt="user" />
 										<p class="news__name">Alex Louis</p>
 									</div>
 									<div class="news__when">
-										<img src="img/news/time.svg" />
+										<img loading="lazy" src="img/news/time.svg" />
 										<p class="news__time">April 16, 2022</p>
 									</div>
 								</div>
@@ -788,20 +805,20 @@
 								</p>
 								<div class="news__more news-more">
 									<p class="news-more__text">View More</p>
-									<img src="img/slider/arrow.svg" />
+									<img loading="lazy" src="img/slider/arrow.svg" />
 								</div>
 							</div>
 							<div class="news__item">
 								<div class="news__img">
-									<img src="img/commercal.jpg" alt="news2" />
+									<img loading="lazy" src="img/commercal.jpg" alt="news2" />
 								</div>
 								<div class="news__date">
 									<div class="news__who">
-										<img src="img/news/user.svg" alt="user" />
+										<img loading="lazy" src="img/news/user.svg" alt="user" />
 										<p class="news__name">John Christin</p>
 									</div>
 									<div class="news__when">
-										<img src="img/news/time.svg" />
+										<img loading="lazy" src="img/news/time.svg" />
 										<p class="news__time">April 16, 2022</p>
 									</div>
 								</div>
@@ -814,7 +831,7 @@
 								</p>
 								<div class="news__more news-more">
 									<p class="news-more__text">View More</p>
-									<img src="img/slider/arrow.svg" />
+									<img loading="lazy" src="img/slider/arrow.svg" />
 								</div>
 							</div>
 						</div>
@@ -843,9 +860,13 @@
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__header">
-						<div class="footer_logo footer-contact"><img src="img/logo2.svg" alt="logo" /></div>
+						<div class="footer_logo footer-contact">
+							<img loading="lazy" src="img/logo2.svg" alt="logo" />
+						</div>
 						<div class="footer-contact">
-							<div class="footer-contact__img"><img src="img/icons/mail.svg" alt="logo" /></div>
+							<div class="footer-contact__img">
+								<img loading="lazy" src="img/icons/mail.svg" alt="logo" />
+							</div>
 							<a href="mailto:Info@bluecollar.com" class="footer-contact__text">
 								<p class="footer-contact__descr">Mail Us</p>
 								<div class="footer-contact__to underline">Info@bluecollar.com</div>
@@ -859,7 +880,9 @@
 							</a>
 						</div>
 						<div class="footer-contact">
-							<div class="footer-contact__img"><img src="img/location.svg" alt="logo" /></div>
+							<div class="footer-contact__img">
+								<img loading="lazy" src="img/location.svg" alt="logo" />
+							</div>
 							<div class="footer-contact__text">
 								<p class="footer-contact__descr">Location</p>
 								<div class="footer-contact__to underline">Amsterdam, 109-74</div>
@@ -874,16 +897,16 @@
 							</div>
 							<div class="footer__socials">
 								<div class="footer__social">
-									<img src="img/icons/socials/instagram.svg" />
+									<img loading="lazy" src="img/icons/socials/instagram.svg" />
 								</div>
 								<div class="footer__social">
-									<img src="img/icons/socials/facebook.svg" />
+									<img loading="lazy" src="img/icons/socials/facebook.svg" />
 								</div>
 								<div class="footer__social">
-									<img src="img/icons/socials/pint.svg" />
+									<img loading="lazy" src="img/icons/socials/pint.svg" />
 								</div>
 								<div class="footer__social">
-									<img src="img/icons/socials/twitter.svg" />
+									<img loading="lazy" src="img/icons/socials/twitter.svg" />
 								</div>
 							</div>
 						</div>

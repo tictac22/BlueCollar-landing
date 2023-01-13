@@ -18,12 +18,16 @@ $maketWidth: 1440;
 @import "reset.scss";
 @import "fonts.scss";
 @import "variables.scss";
-
+html {
+	scroll-behavior: smooth;
+	//overflow-x: hidden;
+}
 body {
 	font-family: "Inter";
 	font-weight: 400;
 	letter-spacing: 0.36px;
 	font-size: 1.125rem;
+	overflow-x: hidden;
 }
 .wrapper {
 	min-height: 100vh;

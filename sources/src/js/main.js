@@ -9,6 +9,7 @@ mql.addEventListener("change", (event) => shuffleElement(event.matches))
 const burger = document.querySelector(".header__burger")
 const navigation = document.querySelector(".navigation")
 burger.addEventListener("click", function (event) {
+	console.log(this, "this")
 	event.stopPropagation()
 	navigation.classList.toggle("navigation--open")
 	this.classList.toggle("header__burger--open")
@@ -20,7 +21,6 @@ burger.addEventListener("click", function (event) {
 })
 
 document.addEventListener("click", (event) => {
-	console.log(event.target.closest(".navigation"))
 	if (!event.target.closest(".navigation") && navigation.classList.contains("navigation--open")) {
 		navigation.classList.remove("navigation--open")
 		burger.classList.remove("header__burger--open")
@@ -72,4 +72,34 @@ new Swiper(".swiper", {
 		el: ".swiper-scrollbar",
 	},
 	modules: [Navigation, Pagination],
+})
+
+const links = document.querySelectorAll(".navigation__list a")
+
+links.forEach((item) => {
+	item.addEventListener("click", (link) => {
+		link.preventDefault()
+		const href = link.target.getAttribute("href")
+		const section = document.querySelector(href)
+
+		let mql = window.matchMedia("(max-width: 768px)")
+		if (mql.matches) {
+			menuTl.reverse(0.8)
+			burger.classList.toggle("header__burger--open")
+			navigation.classList.toggle("navigation--open")
+		}
+
+		window.scrollTo({
+			top: section.offsetTop - 222,
+		})
+		window.history.pushState("page2", "Title", href)
+		links.forEach((item) =>
+			item.href === window.location.href
+				? item.classList.add("navigation__link--active")
+				: item.classList.remove("navigation__link--active")
+		)
+	})
+	if (item.href === window.location.href) {
+		item.classList.add("navigation__link--active")
+	}
 })
