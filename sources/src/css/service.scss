@@ -54,6 +54,11 @@
 		@include adaptiv-value("padding-bottom", 50, 15);
 		@include adaptiv-value("padding-left", 35, 20);
 		background: #1c2752;
+		transition: transform 0.2s ease;
+		cursor: pointer;
+		&:hover {
+			transform: translateY(-15px);
+		}
 	}
 
 	&__img {

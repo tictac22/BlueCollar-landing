@@ -52,6 +52,10 @@
 		@include adaptiv-value("padding-right", 40, 20);
 		@include adaptiv-value("padding-bottom", 20, 10);
 		@include adaptiv-value("padding-left", 40, 20);
+		transition: background-color 0.3s ease-in-out;
+		&:hover {
+			background-color: white;
+		}
 
 		min-width: 249px;
 	}

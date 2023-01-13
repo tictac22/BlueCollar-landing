@@ -2,6 +2,7 @@
 	background: #1c2752;
 	padding: 0px 35px;
 	text-align: center;
+	@include adaptiv-value("padding-top", 150, 20);
 	@include adaptiv-value("padding-bottom", 150, 15);
 
 	&__title {
@@ -53,8 +54,6 @@
 	}
 }
 .projects-subtitle {
-	@include adaptiv-value("margin-top", 150, 20);
-
 	&__text {
 	}
 }

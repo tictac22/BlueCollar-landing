@@ -52,9 +52,13 @@
 	}
 
 	&__social {
-		background: #2c3765;
+		// background: #2c3765;
+		background-color: white;
 		padding: 20px;
-
+		cursor: pointer;
+		&:hover {
+			background: darken(white, 10%);
+		}
 		&:not(:last-child) {
 			margin-right: 15px;
 		}
