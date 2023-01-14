@@ -10,20 +10,7 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<div id="home" class="opening">
-				<div class="container">
-					<div class="opening__inner">
-						<p class="opening__text">Opening Hours: 06:00 to 20:00</p>
-						<div class="opening__socials">
-							<a href="#" class="opening__social"> @@include('./img/icons/socials/facebook.svg') </a>
-							<a href="#" class="opening__social"> @@include('./img/icons/socials/twitter.svg') </a>
-							<a href="#" class="opening__social"> @@include('./img/icons/socials/pint.svg') </a>
-							<a href="#" class="opening__social"> @@include('./img/icons/socials/instagram.svg') </a>
-						</div>
-					</div>
-				</div>
-			</div>
-			@@include('./html/header.html')
+			@@include('./html/opening.html') @@include('./html/header.html')
 			<main class="main">
 				<div class="hero">
 					<img loading="lazy" class="hero__image" src="img/hero.png" />
@@ -91,15 +78,18 @@
 				</div>
 				<div id="offer" class="offer">
 					<div class="container">
-						<div class="offer__subtitle offer-subtitle">
-							<img loading="lazy" src="./img/icons/hatgear.svg" class="offer-subtitle__img" />
-							<h4 class="offer-subtitle__text">What We Offer</h4>
+						<div class="offer__info">
+							<div class="offer__subtitle offer-subtitle">
+								<img loading="lazy" src="./img/icons/hatgear.svg" class="offer-subtitle__img" />
+								<h4 class="offer-subtitle__text">What We Offer</h4>
+							</div>
+							<h3 class="offer__title">Professional Main Services</h3>
+							<p class="offer__text">
+								We have extensive experience of domestic and business electrical installations and no
+								job is too small. Our customers value our professionalism, work ethic and our
+								competitive prices.
+							</p>
 						</div>
-						<h3 class="offer__title">Professional Main Services</h3>
-						<p class="offer__text">
-							We have extensive experience of domestic and business electrical installations and no job is
-							too small. Our customers value our professionalism, work ethic and our competitive prices.
-						</p>
 						<div class="offer__areas offer-areas">
 							<div class="offer-areas__item">
 								<div class="offer-areas__row">
@@ -168,20 +158,22 @@
 				<div class="service">
 					<div id="services">
 						<div class="container">
-							<div class="service-subtitle">
-								<img
-									loading="lazy"
-									src="img/services/title-image.svg"
-									alt="area"
-									class="service-subtitle__img"
-								/>
-								<p class="service-subtitle__text">Area Of Service</p>
+							<div class="services__info">
+								<div class="service-subtitle">
+									<img
+										loading="lazy"
+										src="img/services/title-image.svg"
+										alt="area"
+										class="service-subtitle__img"
+									/>
+									<p class="service-subtitle__text">Area Of Service</p>
+								</div>
+								<h3 class="service__title title">Our Services</h3>
+								<p class="service__text">
+									We offers a comprehensive range of electrical services for domestic and commercial
+									properties at a reasonable price.
+								</p>
 							</div>
-							<h3 class="service__title title">Our Services</h3>
-							<p class="service__text">
-								We offers a comprehensive range of electrical services for domestic and commercial
-								properties at a reasonable price.
-							</p>
 							<div class="services">
 								<div class="services__row">
 									<div class="services__item">
@@ -261,19 +253,27 @@
 							<div class="why-stats__inner">
 								<div class="why-stats__body">
 									<div class="why-stats__item">
-										<span class="why-stats__amount">3956</span>
+										<span class="why-stats__amount"
+											><span class="why-stats__amount-number">3956</span></span
+										>
 										<div class="why-stats__text">Project Done</div>
 									</div>
 									<div class="why-stats__item">
-										<span class="why-stats__amount">854</span>
+										<span class="why-stats__amount">
+											<span class="why-stats__amount-number">854</span>
+										</span>
 										<div class="why-stats__text">People Working</div>
 									</div>
 									<div class="why-stats__item">
-										<span class="why-stats__amount">265</span>
+										<span class="why-stats__amount">
+											<span class="why-stats__amount-number why-stats__amount-number-1">265</span>
+										</span>
 										<div class="why-stats__text">Business Partners</div>
 									</div>
 									<div class="why-stats__item">
-										<span class="why-stats__amount">845+</span>
+										<span class="why-stats__amount">
+											<span class="why-stats__amount-number">845+</span>
+										</span>
 										<div class="why-stats__text">Happy Customers</div>
 									</div>
 								</div>
@@ -857,92 +857,7 @@
 					</div>
 				</div>
 			</main>
-			<footer class="footer">
-				<div class="container">
-					<div class="footer__header">
-						<div class="footer_logo footer-contact">
-							<img loading="lazy" src="img/logo2.svg" alt="logo" />
-						</div>
-						<div class="footer-contact">
-							<div class="footer-contact__img">
-								<img loading="lazy" src="img/icons/mail.svg" alt="logo" />
-							</div>
-							<a href="mailto:Info@bluecollar.com" class="footer-contact__text">
-								<p class="footer-contact__descr">Mail Us</p>
-								<div class="footer-contact__to underline">Info@bluecollar.com</div>
-							</a>
-						</div>
-						<div class="footer-contact">
-							<div class="footer-contact__img">@@include('./img/icons/phone.svg')</div>
-							<a href="tel:+01569896654" class="footer-contact__text">
-								<p class="footer-contact__descr">Call Us</p>
-								<div class="footer-contact__to underline">+01 569 896 654</div>
-							</a>
-						</div>
-						<div class="footer-contact">
-							<div class="footer-contact__img">
-								<img loading="lazy" src="img/location.svg" alt="logo" />
-							</div>
-							<div class="footer-contact__text">
-								<p class="footer-contact__descr">Location</p>
-								<div class="footer-contact__to underline">Amsterdam, 109-74</div>
-							</div>
-						</div>
-					</div>
-					<div class="footer__nav">
-						<div class="footer__item footer__item-socials">
-							<div class="footer__text">
-								We are here to fit the needs of your basic services for your dream building whether its
-								a commercial, residential or industry.
-							</div>
-							<div class="footer__socials">
-								<div class="footer__social">
-									<img loading="lazy" src="img/icons/socials/instagram.svg" />
-								</div>
-								<div class="footer__social">
-									<img loading="lazy" src="img/icons/socials/facebook.svg" />
-								</div>
-								<div class="footer__social">
-									<img loading="lazy" src="img/icons/socials/pint.svg" />
-								</div>
-								<div class="footer__social">
-									<img loading="lazy" src="img/icons/socials/twitter.svg" />
-								</div>
-							</div>
-						</div>
-						<div class="footer__item footer__item-explore">
-							<h6 class="footer__title">Explore</h6>
-							<ul class="footer__list">
-								<li class="footer__link">About Us</li>
-								<li class="footer__link">Pricing</li>
-								<li class="footer__link">Team</li>
-								<li class="footer__link">Blog</li>
-								<li class="footer__link">Contact Us</li>
-							</ul>
-						</div>
-						<div class="footer__item footer__item-quick">
-							<h6 class="footer__title">Quick Links</h6>
-							<ul class="footer__list">
-								<li class="footer__link">Home Us</li>
-								<li class="footer__link">Services</li>
-								<li class="footer__link">Service Single</li>
-								<li class="footer__link">Projects</li>
-								<li class="footer__link">Projects Single</li>
-							</ul>
-						</div>
-						<div class="footer__item footer__item-utility">
-							<h6 class="footer__title">Utility Pages</h6>
-							<ul class="footer__list">
-								<li class="footer__link">Style Guide</li>
-								<li class="footer__link">Changelog</li>
-								<li class="footer__link">Licenses</li>
-								<li class="footer__link">Protected Page</li>
-								<li class="footer__link">404 Page</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</footer>
+			@@include('./html/footer.html')
 		</div>
 		<script type="module" src="js/main.min.js"></script>
 	</body>

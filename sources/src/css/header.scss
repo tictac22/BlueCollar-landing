@@ -1,17 +1,18 @@
 .header {
 	@include adaptiv-value("padding-top", 40, 5);
 	@include adaptiv-value("padding-bottom", 40, 5);
-	position: sticky;
+	position: fixed;
 	background-color: white;
 	width: 100%;
 	z-index: 100;
-	top: 0;
+	top: 65px;
 	&__inner {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
 	transition: background-color 0.3s linear;
+	transition: top 0.2s linear;
 	&__sticky {
 		background-color: rgb(202, 202, 202);
 	}

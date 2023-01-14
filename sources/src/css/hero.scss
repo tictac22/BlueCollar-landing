@@ -1,6 +1,7 @@
 .hero {
 	position: relative;
 	padding-bottom: 20.9%;
+
 	&__image {
 		position: absolute;
 		top: 0;
@@ -10,7 +11,7 @@
 		object-fit: cover;
 	}
 	&__inner {
-		@include adaptiv-value("padding-top", 212, 78);
+		@include adaptiv-value("padding-top", 320, 78);
 	}
 
 	&__text {

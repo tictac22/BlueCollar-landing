@@ -1,4 +1,4 @@
-import { menuTl } from "./gsap.js"
+import { gsapL, menuTl } from "./gsap.js"
 
 import Swiper, { Navigation, Pagination } from "swiper"
 
@@ -45,13 +45,16 @@ function shuffleElement(match) {
 
 const opening = document.querySelector(".opening")
 const header = document.querySelector(".header")
-const observer = new IntersectionObserver((element) => {
-	if (element[0].isIntersecting) {
-		header.classList.remove("header__sticky")
-	} else {
-		header.classList.add("header__sticky")
-	}
-})
+const observer = new IntersectionObserver(
+	(element) => {
+		if (element[0].isIntersecting) {
+			header.style.top = `${opening.getBoundingClientRect().height}px`
+		} else {
+			header.style.top = "0px"
+		}
+	},
+	{ threshold: 0.1 }
+)
 observer.observe(opening)
 
 new Swiper(".swiper", {
@@ -102,4 +105,144 @@ links.forEach((item) => {
 	if (item.href === window.location.href) {
 		item.classList.add("navigation__link--active")
 	}
+})
+
+let tm = gsapL.timeline()
+
+tm.from(".hero__text > *", {
+	duration: 1,
+	opacity: 0,
+	y: 100,
+	ease: "power2.out",
+	delay: 0.4,
+	stagger: 0.3,
+})
+
+let tm2 = gsapL.timeline({ scrollTrigger: { trigger: ".welcome", start: "top center" } })
+
+tm2.from(".welcome__img", {
+	opacity: 0,
+	duration: 1,
+	y: 500,
+})
+	.from(
+		".welcome__about > *",
+		{
+			x: 300,
+			duration: 1,
+			opacity: 0,
+			stagger: 0.3,
+		},
+		"-=1"
+	)
+	.from(".welcome-statistics__numbers", {
+		opacity: 0,
+		innerText: 0,
+		duration: 3,
+		snap: {
+			innerText: 1,
+		},
+	})
+
+let tm3 = gsapL.timeline({ scrollTrigger: { trigger: ".offer", start: "top center" } })
+
+tm3.from(".offer__info > *", {
+	duration: 1,
+	opacity: 0,
+	y: 300,
+	stagger: 0.2,
+}).from(
+	".offer__areas > *",
+	{
+		stagger: 0.4,
+		duration: 1,
+		opacity: 0,
+		y: 400,
+		ease: "back.out(1.5)",
+	},
+	"-=0.3"
+)
+
+let tm4 = gsapL.timeline({ scrollTrigger: { trigger: ".service", start: "top center" } })
+
+tm4.from(".services__info > *", {
+	duration: 1,
+	opacity: 0,
+	y: 400,
+	stagger: 0.2,
+	ease: "power2.out",
+})
+	.from(
+		".services__item",
+		{
+			duration: 1,
+			opacity: 0,
+			stagger: 0.3,
+			y: 400,
+			ease: "back.out(1.5)",
+		},
+		"-=0.3"
+	)
+	.eventCallback("onComplete", () => {
+		document.querySelectorAll(".services__item").forEach((item) => (item.style.transition = "transform 0.2s ease"))
+	})
+
+let tm5 = gsapL.timeline({ scrollTrigger: { trigger: ".why", start: "-30px center" } })
+
+document.querySelectorAll(".why-stats__amount-number").forEach((item) => {
+	let counter = { var: 0 }
+	let hasPlus = false
+	let numberTill = parseInt(item.innerHTML)
+	if (item.textContent.includes("+")) {
+		hasPlus = true
+	}
+
+	item.textContent = 0
+	tm5.to(
+		counter,
+		5,
+		{
+			var: numberTill,
+
+			onUpdate: function () {
+				item.innerHTML = Math.floor(counter.var.toString())
+				if (hasPlus) {
+					item.innerText += "+"
+				}
+			},
+
+			ease: "power3.out",
+		},
+		"<"
+	)
+})
+
+tm5.from(
+	".why-facts__item",
+	{
+		stagger: 0.4,
+		y: 300,
+		opacity: 0,
+	},
+	"<"
+)
+
+let tm6 = gsapL.timeline({ scrollTrigger: { trigger: ".projects", start: "top center" } })
+tm6.from(".projects__item", {
+	scale: 0.6,
+	duration: 0.3,
+	opacity: 0,
+})
+
+let tm7 = gsapL.timeline({ scrollTrigger: { trigger: ".plan", start: "top center" } })
+tm7.from(".plan__text", {
+	duration: 0.5,
+	opacity: 0,
+	y: 400,
+	ease: "power3.out",
+}).from(".plans__row", {
+	stagger: 0.3,
+	y: 400,
+	opacity: 0,
+	ease: "power1.inOut",
 })

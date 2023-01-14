@@ -27,14 +27,15 @@ body {
 	font-weight: 400;
 	letter-spacing: 0.36px;
 	font-size: 1.125rem;
-	overflow-x: hidden;
 }
 .wrapper {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	overflow-x: hidden;
 }
+
 .container {
 	max-width: 1230px;
 	padding: 0 15px;

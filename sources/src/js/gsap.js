@@ -1,4 +1,7 @@
 import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js"
+
+gsap.registerPlugin(ScrollTrigger)
 
 export const menuTl = gsap.timeline({ paused: true })
 
@@ -17,3 +20,5 @@ menuTl.to(
 	},
 	"-=0.8"
 )
+
+export const gsapL = gsap
