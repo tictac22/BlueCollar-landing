@@ -47,9 +47,9 @@ const header = document.querySelector(".header")
 const observer = new IntersectionObserver(
 	(element) => {
 		if (element[0].isIntersecting) {
-			header.style.top = `${opening.getBoundingClientRect().height}px`
+			header.classList.remove("header__sticky")
 		} else {
-			header.style.top = "0px"
+			header.classList.add("header__sticky")
 		}
 	},
 	{ threshold: 0.1 }
@@ -84,15 +84,15 @@ links.forEach((item) => {
 		const href = link.target.getAttribute("href")
 		const section = document.querySelector(href)
 
-		let mql = window.matchMedia("(max-width: 768px)")
+		let mql = window.matchMedia("(max-width: 1024px)")
 		if (mql.matches) {
 			menuTl.reverse(0.8)
 			burger.classList.toggle("header__burger--open")
 			navigation.classList.toggle("navigation--open")
 		}
-
+		console.log(header.offsetHeight)
 		window.scrollTo({
-			top: section.offsetTop - 222,
+			top: section.getBoundingClientRect().top + window.scrollY - header.getBoundingClientRect().height,
 		})
 		window.history.pushState("page2", "Title", href)
 		links.forEach((item) =>
