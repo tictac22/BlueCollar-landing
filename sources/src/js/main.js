@@ -1,7 +1,6 @@
-import { gsapL, menuTl } from "./gsap.js"
-
 import Swiper, { Navigation, Pagination } from "swiper"
-
+import { gsapL, menuTl } from "./gsap.js"
+//const myWorker = new Worker(new URL("webp.js", import.meta.url))
 let mql = window.matchMedia("(max-width: 768px)")
 if (mql.matches) shuffleElement(mql.matches)
 mql.addEventListener("change", (event) => shuffleElement(event.matches))
@@ -246,3 +245,19 @@ tm7.from(".plan__text", {
 	opacity: 0,
 	ease: "power1.inOut",
 })
+
+const supportWebp = () => {
+	const img = new Image()
+	let hasWebP = false
+	img.onload = function () {
+		hasWebP = !!(img.height > 0 && img.width > 0)
+		console.log("support")
+	}
+	img.onerror = function () {
+		hasWebP = false
+		console.log("not support")
+	}
+	img.src = "http://www.gstatic.com/webp/gallery/1.webp"
+}
+
+supportWebp()
