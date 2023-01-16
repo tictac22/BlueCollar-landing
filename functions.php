@@ -16,8 +16,10 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 add_theme_support('post-thumbnails');
 add_theme_support( 'custom-logo' );
 
-include_once __DIR__ . '/functions/menu.php';
-
 wp_widgets_init();
+
+include_once __DIR__ . '/functions/menu.php';
+include_once __DIR__ . '/functions/services-post.php';
+
 
 

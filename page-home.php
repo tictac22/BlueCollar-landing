@@ -4,6 +4,7 @@
 	$heroInfo = get_field('hero_section_info');
 	$provideInfo = get_field('provide__info');
 	$offerInfo = get_field('offer');
+	$servicesInfo = get_field('services__info');
 	
 ?>
 <? get_header()  ?>
@@ -151,107 +152,32 @@
 								alt="area"
 								class="service-subtitle__img"
 							/>
-							<p class="service-subtitle__text">Area Of Service</p>
+							<p class="service-subtitle__text"><?= $servicesInfo['subtitle'] ?></p>
 						</div>
-						<h3 class="service__title title">Our Services</h3>
+						<h3 class="service__title title"><?= $servicesInfo['title'] ?></h3>
 						<p class="service__text">
-							We offers a comprehensive range of electrical services for domestic and commercial
-							properties at a reasonable price.
+							<?= $servicesInfo['text'] ?>
 						</p>
 					</div>
 					<div class="services">
 						<div class="services__row">
-							<div class="services__item">
-								<div class="services__img">
-									<img
-										loading="lazy"
-										alt="electrical"
-										src="<?= ASSETS_IMG ?>services/electrical.svg"
-										alt="electrical"
-									/>
+							<?php foreach(getServicesPost() as $service ): ?>
+								<div class="services__item">
+									<div class="services__img">
+										<img
+											loading="lazy"
+											alt="electrical"
+											src="<?= get_the_post_thumbnail_url($service->ID) ?>"
+											alt="electrical"
+										/>
+									</div>
+									<h5 class="services__title"><?= $service->post_title  ?></h5>
+									<p class="services__text">
+										<?= $service->post_content ?>
+									</p>
+									<p class="services__more">View More</p>
 								</div>
-								<h5 class="services__title">Electrical installation</h5>
-								<p class="services__text">
-									The art electrical installations that provide all the necessary electrical
-									solutions to suit your business, home or industrial premises.
-								</p>
-								<p class="services__more">View More</p>
-							</div>
-							<div class="services__item">
-								<div class="services__img">
-									<img
-										loading="lazy"
-										alt="condition"
-										src="<?= ASSETS_IMG ?>services/condition.svg"
-										alt="condition"
-									/>
-								</div>
-								<h5 class="services__title">Air condition service</h5>
-								<p class="services__text">
-									Services are able to service your entire electrical infrastructure from
-									Thermal Imaging of your air condition from switch boards.
-								</p>
-								<p class="services__more">View More</p>
-							</div>
-							<div class="services__item">
-								<div class="services__img">
-									<img
-										loading="lazy"
-										alt="builder"
-										src="<?= ASSETS_IMG ?>services/builder.svg"
-										alt="builder"
-									/>
-								</div>
-								<h5 class="services__title">General Builder</h5>
-								<p class="services__text">
-									We provide impeccable safety assessments to both commercial, residential
-									properties. Our adept & knowledgeable electricians.
-								</p>
-								<p class="services__more">View More</p>
-							</div>
-							<div class="services__item">
-								<div class="services__img">
-									<img
-										loading="lazy"
-										alt="services"
-										src="<?= ASSETS_IMG ?>services/security.svg"
-										alt="security"
-									/>
-								</div>
-								<h5 class="services__title">Security System</h5>
-								<p class="services__text">
-									Utilized for measuring flow, temperature level & pressure in the
-									manufacturing industry array of technology is ensure productivity.
-								</p>
-								<p class="services__more">View More</p>
-							</div>
-							<div class="services__item">
-								<div class="services__img">
-									<img
-										loading="lazy"
-										alt="maintaince"
-										src="<?= ASSETS_IMG ?>services/maintaince.svg"
-										alt="maintaince"
-									/>
-								</div>
-								<h5 class="services__title">Service & maintenance</h5>
-								<p class="services__text">
-									Electrical Services are able to service your entire electrical
-									infrastructure from Thermal Imaging of your switch boards.
-								</p>
-								<p class="services__more">View More</p>
-							</div>
-							<div class="services__item">
-								<div class="services__img">
-									<img loading="lazy" alt="house" src="<?= ASSETS_IMG ?>services/house.svg" alt="house" />
-								</div>
-								<h5 class="services__title">House Extensions</h5>
-								<p class="services__text">
-									Traditionally, electricity is supplied through overhead network poles, where
-									the cable is connected to your building.
-								</p>
-								<p class="services__more">View More</p>
-							</div>
+							<? endforeach ?>
 						</div>
 					</div>
 				</div>
