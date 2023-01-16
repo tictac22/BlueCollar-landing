@@ -39,7 +39,10 @@ function register_post_types(){
 		'rewrite'             => true,
 		'query_var'           => true,
 	] );
+
+	
 }
+
 
 function getServicesPost() {
 	return get_posts([

@@ -285,62 +285,24 @@
 			<h2 class="projects__title">Our Recent Projects</h2>
 			<div class="projects__list">
 				<div class="projects__grid">
-					<div class="projects__item">
-						<div class="projects__img">
-							<picture
-								><source srcset="<?= ASSETS_IMG ?>projects/project1.webp" type="image/webp" />
-								<img
-									loading="lazy"
-									alt="project1"
-									src="<?= ASSETS_IMG ?>projects/project1.jpg"
-									alt="project1"
-							/></picture>
+					<?php foreach(getProjectsPosts() as $project): ?>
+						<div class="projects__item">
+							<div class="projects__img">
+								<picture>
+									<source srcset="<?= get_the_post_thumbnail_url($project->ID) ?>" type="image/webp" />
+									<img
+										loading="lazy"
+										alt="project1"
+										src="<?= get_the_post_thumbnail_url($project->ID) ?>"
+										alt="project1"
+									/>
+							</picture>
+							</div>
+							
+							<h5 class="projects__text"><?= $project->post_title ?></h5>
+							<p class="projects__type"><?= get_the_terms($project->ID,'project_type')[0]->name ?></p>
 						</div>
-						<h5 class="projects__text">Fiber cable change</h5>
-						<p class="projects__type">Commercial</p>
-					</div>
-					<div class="projects__item">
-						<div class="projects__img">
-							<picture
-								><source srcset="<?= ASSETS_IMG ?>projects/project2.webp" type="image/webp" />
-								<img
-									loading="lazy"
-									alt="project2"
-									src="<?= ASSETS_IMG ?>projects/project2.jpg"
-									alt="project1"
-							/></picture>
-						</div>
-						<h5 class="projects__text">Industry machine issue</h5>
-						<p class="projects__type">Industry</p>
-					</div>
-					<div class="projects__item">
-						<div class="projects__img">
-							<picture
-								><source srcset="<?= ASSETS_IMG ?>projects/project3.webp" type="image/webp" />
-								<img
-									loading="lazy"
-									alt="project3"
-									src="<?= ASSETS_IMG ?>projects/project3.jpg"
-									alt="project1"
-							/></picture>
-						</div>
-						<h5 class="projects__text">Wheel Alloy Change</h5>
-						<p class="projects__type">Residential</p>
-					</div>
-					<div class="projects__item">
-						<div class="projects__img">
-							<picture
-								><source srcset="<?= ASSETS_IMG ?>projects/project4.webp" type="image/webp" />
-								<img
-									loading="lazy"
-									alt="project4"
-									src="<?= ASSETS_IMG ?>projects/project4.jpg"
-									alt="project1"
-							/></picture>
-						</div>
-						<h5 class="projects__text">Roof Cleaning</h5>
-						<p class="projects__type">Commercial</p>
-					</div>
+					<? endforeach ?>
 				</div>
 			</div>
 		</div>
