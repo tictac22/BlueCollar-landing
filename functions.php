@@ -24,4 +24,13 @@ include_once __DIR__ . '/functions/projects-post.php';
 include_once __DIR__ . '/functions/plans-post.php';
 
 
+function getArticles() {
+	$articles = get_posts([
+		'post_type'  => 'post',
+	]);
+
+	return $articles;
+}
+
+
 

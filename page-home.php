@@ -401,33 +401,7 @@
 						</div>
 						<h2 class="form__title title">Appointment Form</h2>
 						<div class="form__inner">
-							<div class="form__wrapper">
-								<input class="form__input" type="text" placeholder="Your name" />
-							</div>
-							<div class="form__wrapper">
-								<input class="form__input" type="text" placeholder="Your email" />
-							</div>
-							<div class="form__wrapper">
-								<input class="form__input" type="text" placeholder="Phone Number" />
-							</div>
-							<div class="form__wrapper">
-								<input class="form__input form__date" type="date" placeholder="Date" />
-								<img
-									loading="lazy"
-									class="date__img"
-									src="<?= ASSETS_IMG ?>slider/date.svg"
-									alt="calendar"
-								/>
-							</div>
-							<div class="form__wrapper">
-								<textarea
-									class="form__input form__textarea"
-									placeholder="Service Description"
-								></textarea>
-							</div>
-							<div class="form__wrapper">
-								<button class="form__button" type="submit">Submit</button>
-							</div>
+							<?= do_shortcode('[contact-form-7 id="170" title="Contact form 1"]') ?>
 						</div>
 					</form>
 				</div>
@@ -591,64 +565,33 @@
 				</div>
 				<h2 class="news__title title">Latest News & Articles</h2>
 				<div class="news__grid">
+
+					<? foreach(getArticles() as $article) :?>
 					<div class="news__item">
-						<div class="news__img">
-							<picture
-								><source srcset="<?= ASSETS_IMG ?>hero.webp" type="image/webp" />
-								<img loading="lazy" src="<?= ASSETS_IMG ?>hero.png" alt="news1"
-							/></picture>
-						</div>
-						<div class="news__date">
-							<div class="news__who">
-								<img loading="lazy" src="<?= ASSETS_IMG ?>news/user.svg" alt="user" />
-								<p class="news__name">Alex Louis</p>
+							<div class="news__img">
+								<picture
+									><source srcset="<?= ASSETS_IMG ?>hero.webp" type="image/webp" />
+									<img loading="lazy" src="<?= ASSETS_IMG ?>hero.png" alt="news1"
+								/></picture>
 							</div>
-							<div class="news__when">
-								<img loading="lazy" alt="date" src="<?= ASSETS_IMG ?>news/time.svg" />
-								<p class="news__time">April 16, 2022</p>
+							<div class="news__date">
+								<div class="news__who">
+									<img loading="lazy" src="<?= ASSETS_IMG ?>news/user.svg" alt="user" />
+									<p class="news__name"><?= get_the_author_meta('user_lastname')?> <?= get_the_author_meta('user_firstname') ?></p>
+								</div>
+								<div class="news__when">
+									<img loading="lazy" alt="date" src="<?= ASSETS_IMG ?>news/time.svg" />
+									<p class="news__time"><?= get_the_date() ?></p>
+								</div>
 							</div>
-						</div>
-						<h3 class="news__subtitle">How Outside Lighting can Transform Your Summer Garden</h3>
-						<p class="news__text text">
-							Capitalize on low-hanging fruit to identify a ballpark value added matrix
-							economically activity to beta test override the multiple touchpoints for offshoring
-							the digital divide with DevOps. the digital divide with DevOps. the digital divide
-							with DevOps.
-						</p>
-						<div class="news__more news-more">
-							<p class="news-more__text">View More</p>
-							<img loading="lazy" alt="arrow" src="<?= ASSETS_IMG ?>slider/arrow.svg" />
-						</div>
-					</div>
-					<div class="news__item">
-						<div class="news__img">
-							<picture
-								><source srcset="<?= ASSETS_IMG ?>commercal.webp" type="image/webp" />
-								<img loading="lazy" src="<?= ASSETS_IMG ?>commercal.jpg" alt="news2"
-							/></picture>
-						</div>
-						<div class="news__date">
-							<div class="news__who">
-								<img loading="lazy" src="<?= ASSETS_IMG ?>news/user.svg" alt="user" />
-								<p class="news__name">John Christin</p>
-							</div>
-							<div class="news__when">
-								<img loading="lazy" alt="time" src="<?= ASSETS_IMG ?>news/time.svg" />
-								<p class="news__time" alt="date">April 16, 2022</p>
+							<h3 class="news__subtitle"><?= $article->post_title ?></h3>
+							<?= $article->post_content ?>
+							<div class="news__more news-more">
+								<p class="news-more__text">View More</p>
+								<img loading="lazy" alt="arrow" src="<?= ASSETS_IMG ?>slider/arrow.svg" />
 							</div>
 						</div>
-						<h3 class="news__subtitle">Easy Energy Saving Solutions for Industrial Businesses</h3>
-						<p class="news__text text">
-							Strategies on low-hanging fruit to identify a ballpark value added activity matrix
-							economically to beta test override multiple touchpoints for offshoring the digital
-							divide with DevOps. the digital divide with DevOps. the digital divide with DevOps.
-							the digital divide with DevOps.
-						</p>
-						<div class="news__more news-more">
-							<p class="news-more__text">View More</p>
-							<img loading="lazy" alt="arrow" src="<?= ASSETS_IMG ?>slider/arrow.svg" />
-						</div>
-					</div>
+					<? endforeach ?>
 				</div>
 			</div>
 		</div>
