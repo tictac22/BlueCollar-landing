@@ -6,3 +6,34 @@
 .service__text {
 	flex: 1 1 auto;
 }
+.why-facts__descr {
+	position: relative;
+	margin-left: 0px;
+	padding-left: 20px;
+}
+.why-facts__descr:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('../img/icons/accept.svg');
+	width: 32px;
+	height: 32px;
+	top: -5px;
+	left: -17px;
+}
+.plans__item {
+	position: relative;
+}
+.plans__item span {
+	margin-left: 29px;
+}
+.plans__item:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('../img/icons/ok.svg');
+	width: 19px;
+	height: 19px;
+}

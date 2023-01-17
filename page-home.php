@@ -5,6 +5,7 @@
 	$provideInfo = get_field('provide__info');
 	$offerInfo = get_field('offer');
 	$servicesInfo = get_field('services__info');
+	$whyWeInfo = get_field('why_we');
 	
 ?>
 <? get_header()  ?>
@@ -188,30 +189,7 @@
 				<div class="why__stats why-stats" style="background-image: url('<?= ASSETS_IMG?>why.webp')">
 					<div class="why-stats__inner">
 						<div class="why-stats__body">
-							<div class="why-stats__item">
-								<span class="why-stats__amount"
-									><span class="why-stats__amount-number">3956</span></span
-								>
-								<div class="why-stats__text">Project Done</div>
-							</div>
-							<div class="why-stats__item">
-								<span class="why-stats__amount">
-									<span class="why-stats__amount-number">854</span>
-								</span>
-								<div class="why-stats__text">People Working</div>
-							</div>
-							<div class="why-stats__item">
-								<span class="why-stats__amount">
-									<span class="why-stats__amount-number why-stats__amount-number-1">265</span>
-								</span>
-								<div class="why-stats__text">Business Partners</div>
-							</div>
-							<div class="why-stats__item">
-								<span class="why-stats__amount">
-									<span class="why-stats__amount-number">845+</span>
-								</span>
-								<div class="why-stats__text">Happy Customers</div>
-							</div>
+							<?= $whyWeInfo['projects_amount'] ?>
 						</div>
 					</div>
 				</div>
@@ -224,46 +202,15 @@
 								src="<?= ASSETS_IMG ?>services/title-image.svg"
 								alt="why us"
 							/>
-							<h4 class="why-subtitle__text">Why Choose Us</h4>
+							<h4 class="why-subtitle__text"><?= $whyWeInfo['subtitle'] ?></h4>
 						</div>
-						<h3 class="why-we__title title">Few Reasons Why You Should Choose Us</h3>
+						<h3 class="why-we__title title"><?= $whyWeInfo['title'] ?></h3>
 						<p class="why-we__text text">
-							We are offering the following information's about us that what we actually do in the
-							electrical sector. To Improve our customers’ lives by providing creative and
-							cost-effective solutions to their needs.
+							<?= $whyWeInfo['text'] ?>
 						</p>
 						<div class="why__facts why-facts">
 							<div class="why-facts__items">
-								<div class="why-facts__item">
-									<img loading="lazy" alt="accept" src="<?= ASSETS_IMG ?>icons/accept.svg" alt="ok" />
-									<div class="why-facts__descr">
-										<h4 class="why-facts__title">35 Years Experience</h4>
-										<p class="why-facts__text text">
-											Effective communication is the key to success for any business. From our
-											office staff, to our field.
-										</p>
-									</div>
-								</div>
-								<div class="why-facts__item">
-									<img loading="lazy" alt="accept" src="<?= ASSETS_IMG ?>icons/accept.svg" alt="ok" />
-									<div class="why-facts__descr">
-										<h4 class="why-facts__title">Excellence Certificate</h4>
-										<p class="why-facts__text text">
-											We understand fully that your time is of extreme value. We are committed
-											to meeting deadlines.
-										</p>
-									</div>
-								</div>
-								<div class="why-facts__item">
-									<img loading="lazy" alt="accept" src="<?= ASSETS_IMG ?>icons/accept.svg" alt="ok" />
-									<div class="why-facts__descr">
-										<h4 class="why-facts__title">Affordable Price</h4>
-										<p class="why-facts__text text">
-											We adhere strictly to the current National Electrical Code, and we
-											conduct regular in-house sessions.
-										</p>
-									</div>
-								</div>
+								<?= $whyWeInfo['projects_arguments'] ?>
 							</div>
 						</div>
 					</div>
@@ -579,132 +526,26 @@
 				</div>
 				<div class="plans">
 					<div class="plans__grid">
-						<div class="plans__row">
-							<h5 class="plans__title">Basic Plan</h5>
-							<div class="plans__descr">
-								<div class="plans__wrapper">
-									<p class="plans__price">$ 599.00</p>
-									<div class="plans__additional">
-										<p class="plans__type">Per Visit Charge</p>
+						<? foreach(getPlanPosts() as $plan): ?>
+							<div class="plans__row">
+								<h5 class="plans__title"><?= $plan->post_title  ?></h5>
+								<div class="plans__descr">
+									<div class="plans__wrapper">
+										<p class="plans__price"><?= $plan->customFields['price'] ?></p>
+										<div class="plans__additional">
+											<?php 
+											if( $plan->tag) { ?>
+												<span class="plans__tag"><?= $plan->tag ?></span>
+											<?php } ?>
+											<p class="plans__type"><?= $plan->customFields['type'] ?></p>
+										</div>
 									</div>
 								</div>
+								<hr class="plans__line" />
+								<?= $plan->post_content ?>
+								<button class="plans__button button">Buy Now</button>
 							</div>
-							<hr class="plans__line" />
-							<ul class="plans__list">
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Electrical Service</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Distribution Power Systems</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>High & Medium Voltages</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Industrial Control Systems</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Switch Installation</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Generator Installations</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Innovative Construction</span>
-								</li>
-							</ul>
-							<button class="plans__button button">Buy Now</button>
-						</div>
-						<div class="plans__row">
-							<h5 class="plans__title">Standard</h5>
-							<div class="plans__descr">
-								<div class="plans__wrapper">
-									<p class="plans__price">$ 699.00</p>
-									<div class="plans__additional">
-										<span class="plans__tag">Popular</span>
-										<p class="plans__type">Per Visit Charge</p>
-									</div>
-								</div>
-							</div>
-							<hr class="plans__line" />
-							<ul class="plans__list">
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>PLC Controls</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Conveyor systems</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Wiring renovations</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Electric Water Heater Repair</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Service And Panel Upgrades</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Efficient Lighting Solutions</span>
-								</li>
-							</ul>
-							<button class="plans__button button">Buy Now</button>
-						</div>
-						<div class="plans__row">
-							<h5 class="plans__title">Professional</h5>
-							<div class="plans__descr">
-								<div class="plans__wrapper">
-									<p class="plans__price">$ 799.00</p>
-									<div class="plans__additional">
-										<p class="plans__type">Per Visit Charge</p>
-									</div>
-								</div>
-							</div>
-							<hr class="plans__line" />
-							<ul class="plans__list">
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Cable Tray Installations</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Wiring Upgrades</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Energy Efficient Lighting</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Emergency Generating</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Pools And Hot Tubs</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Air Conditioning Units</span>
-								</li>
-								<li class="plans__item text">
-									<img loading="lazy" alt="ok" src="<?= ASSETS_IMG ?>icons/ok.svg" />
-									<span>Generating Systems</span>
-								</li>
-							</ul>
-							<button class="plans__button button">Buy Now</button>
-						</div>
+						<? endforeach ?>
 					</div>
 				</div>
 				<div class="benefits">

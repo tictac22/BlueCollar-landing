@@ -21,6 +21,7 @@ wp_widgets_init();
 include_once __DIR__ . '/functions/menu.php';
 include_once __DIR__ . '/functions/services-post.php';
 include_once __DIR__ . '/functions/projects-post.php';
+include_once __DIR__ . '/functions/plans-post.php';
 
 
 
