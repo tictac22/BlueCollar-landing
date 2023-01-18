@@ -570,8 +570,8 @@
 					<div class="news__item">
 							<div class="news__img">
 								<picture
-									><source srcset="<?= ASSETS_IMG ?>hero.webp" type="image/webp" />
-									<img loading="lazy" src="<?= ASSETS_IMG ?>hero.png" alt="news1"
+									><source srcset="<?= get_the_post_thumbnail_url($article->ID) ?>" type="image/webp" />
+									<img loading="lazy" src="<?= get_the_post_thumbnail_url($article->ID) ?>" alt="news1"
 								/></picture>
 							</div>
 							<div class="news__date">
